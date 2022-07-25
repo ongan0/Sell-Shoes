@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qzmlKD3LssyikO2nBT7AG6V8aJ6ErWpL+f2SJT/PxoHcyjaGrGa1YezKCuC9wQn+h57FoZYe6HqCYqkLhnvjDw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\MOB104\\GitHub\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\OneDrive\\Máy tính\\MOB104\\GitHub\\Sell_Shoes\\Sell_Shoes\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
+}
