@@ -32,23 +32,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbt_MatKhau = new System.Windows.Forms.TextBox();
             this.tbt_TenDangNhap = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-=======
->>>>>>> dev
             this.SuspendLayout();
             // 
             // btt_Login
             // 
             this.btt_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btt_Login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.btt_Login.Location = new System.Drawing.Point(174, 201);
-=======
-            this.btt_Login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btt_Login.Location = new System.Drawing.Point(383, 276);
->>>>>>> dev
             this.btt_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btt_Login.Name = "btt_Login";
             this.btt_Login.Size = new System.Drawing.Size(124, 42);
@@ -97,6 +89,7 @@
             this.btn_Thoat.TabIndex = 14;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -107,38 +100,15 @@
             this.label1.Size = new System.Drawing.Size(140, 28);
             this.label1.TabIndex = 15;
             this.label1.Text = "Tên đăng nhập";
-<<<<<<< HEAD
             this.label1.UseWaitCursor = true;
-=======
-            // 
-            // tbt_MatKhau
-            // 
-            this.tbt_MatKhau.Location = new System.Drawing.Point(383, 187);
-            this.tbt_MatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbt_MatKhau.Name = "tbt_MatKhau";
-            this.tbt_MatKhau.Size = new System.Drawing.Size(197, 27);
-            this.tbt_MatKhau.TabIndex = 11;
-            // 
-            // tbt_TenDangNhap
-            // 
-            this.tbt_TenDangNhap.Location = new System.Drawing.Point(383, 126);
-            this.tbt_TenDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbt_TenDangNhap.Name = "tbt_TenDangNhap";
-            this.tbt_TenDangNhap.Size = new System.Drawing.Size(197, 27);
-            this.tbt_TenDangNhap.TabIndex = 10;
->>>>>>> dev
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(517, 327);
+            this.ClientSize = new System.Drawing.Size(529, 331);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Thoat);
-=======
-            this.ClientSize = new System.Drawing.Size(800, 450);
->>>>>>> dev
             this.Controls.Add(this.btt_Login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbt_MatKhau);

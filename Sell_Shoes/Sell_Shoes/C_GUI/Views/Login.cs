@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Sell_Shoes.Models;
+using Sell_Shoes.B_BUS.Utilities;
 using Sell_Shoes;
 
 namespace Sell_Shoes.Views
@@ -36,7 +36,7 @@ namespace Sell_Shoes.Views
             }
             else
             {
-                Account? account = accounts.FirstOrDefault(a => a.TenDangNhap == tbt_TenDangNhap.Text.Trim() && a.MatKhau == tbt_MatKhau.Text.Trim());
+                Account? account = accounts.FirstOrDefault(a => a.username == tbt_TenDangNhap.Text.Trim() && a.password == tbt_MatKhau.Text.Trim());
                 if (account == null)
                 {
                     MessageBox.Show("Bạn nhập sai tài khoản hoặc mật khẩu");
@@ -56,9 +56,6 @@ namespace Sell_Shoes.Views
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

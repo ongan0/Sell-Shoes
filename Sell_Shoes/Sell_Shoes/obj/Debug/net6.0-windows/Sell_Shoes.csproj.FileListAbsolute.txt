@@ -50,3 +50,19 @@ C:\Users\FPTSHOP\Desktop\MOB104\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\r
 C:\Users\FPTSHOP\Desktop\MOB104\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.pdb
 C:\Users\FPTSHOP\Desktop\MOB104\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.genruntimeconfig.cache
 C:\Users\FPTSHOP\Desktop\MOB104\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\ref\Sell_Shoes.dll
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.DoanhThu.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.HoaDon_NV.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.HoaDon_QL.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.KiemKho_NV.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.Login.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.Order_NV.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.SanPham_QL.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.Support.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.TongHopCN_NV.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.TongHopCN_QL.resources
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Máy tính\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.csproj.CoreCompileInputs.cache
