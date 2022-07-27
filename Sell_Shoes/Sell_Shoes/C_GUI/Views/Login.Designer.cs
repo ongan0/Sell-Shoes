@@ -128,10 +128,8 @@
         private Label label2;
         private TextBox tbt_MatKhau;
         private TextBox tbt_TenDangNhap;
-<<<<<<< HEAD
+
         private Button btn_Thoat;
         private Label label1;
-=======
->>>>>>> dev
     }
 }
