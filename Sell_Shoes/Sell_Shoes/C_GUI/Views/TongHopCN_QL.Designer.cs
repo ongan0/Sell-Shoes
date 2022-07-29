@@ -68,6 +68,7 @@
             this.btn_Hoadon.TabIndex = 2;
             this.btn_Hoadon.Text = "Hóa đơn";
             this.btn_Hoadon.UseVisualStyleBackColor = false;
+            this.btn_Hoadon.Click += new System.EventHandler(this.btn_Hoadon_Click);
             // 
             // btn_Doanhthu
             // 

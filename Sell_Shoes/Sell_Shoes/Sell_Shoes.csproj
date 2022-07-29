@@ -30,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="A_DAL\" />
     <Folder Include="C_GUI\Resources\" />
   </ItemGroup>
 
