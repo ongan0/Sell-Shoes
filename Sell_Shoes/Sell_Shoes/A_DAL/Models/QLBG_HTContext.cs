@@ -39,15 +39,9 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.ToTable("CTHoaDon");
 
-                entity.Property(e => e.MaSanpham)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_sanpham")
-                    .IsFixedLength();
+                entity.Property(e => e.MaSanpham).HasColumnName("ma_sanpham");
 
-                entity.Property(e => e.MaHoadon)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_hoadon")
-                    .IsFixedLength();
+                entity.Property(e => e.MaHoadon).HasColumnName("ma_hoadon");
 
                 entity.Property(e => e.Dongiaban)
                     .HasColumnType("money")
@@ -62,48 +56,34 @@ namespace Sell_Shoes.A_DAL.Models
                 entity.Property(e => e.Tongtien)
                     .HasColumnType("money")
                     .HasColumnName("tongtien");
-
-                entity.HasOne(d => d.MaHoadonNavigation)
-                    .WithMany(p => p.CthoaDons)
-                    .HasForeignKey(d => d.MaHoadon)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CTHoaDon_HoaDon");
-
-                entity.HasOne(d => d.MaSanphamNavigation)
-                    .WithMany(p => p.CthoaDons)
-                    .HasForeignKey(d => d.MaSanpham)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CTHoaDon_SanPham");
             });
 
             modelBuilder.Entity<DoanhThu>(entity =>
             {
-                entity.HasKey(e => e.MaDoanhthu)
-                    .HasName("PK__DoanhThu__D306E3BA7917BEE6");
+                entity.HasKey(e => e.Ngayxuat);
 
                 entity.ToTable("DoanhThu");
 
-                entity.Property(e => e.MaDoanhthu).HasColumnName("ma_doanhthu");
+                entity.Property(e => e.Ngayxuat)
+                    .HasColumnType("date")
+                    .HasColumnName("ngayxuat");
 
                 entity.Property(e => e.Doanhthu1)
                     .HasColumnType("money")
                     .HasColumnName("doanhthu");
 
-                entity.Property(e => e.Ngayxuat)
-                    .HasColumnType("date")
-                    .HasColumnName("ngayxuat");
+                entity.Property(e => e.MaDoanhthu)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("ma_doanhthu");
             });
 
             modelBuilder.Entity<HoaDon>(entity =>
             {
-                entity.HasKey(e => e.MaHoadon);
+                entity.HasNoKey();
 
                 entity.ToTable("HoaDon");
 
-                entity.Property(e => e.MaHoadon)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_hoadon")
-                    .IsFixedLength();
+                entity.Property(e => e.MaHoadon).HasColumnName("ma_hoadon");
 
                 entity.Property(e => e.Ngaylap)
                     .HasColumnType("date")
@@ -120,10 +100,7 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.ToTable("SanPham");
 
-                entity.Property(e => e.MaSanpham)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_sanpham")
-                    .IsFixedLength();
+                entity.Property(e => e.MaSanpham).HasColumnName("ma_sanpham");
 
                 entity.Property(e => e.Dongianhap)
                     .HasColumnType("money")
