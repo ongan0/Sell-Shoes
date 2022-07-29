@@ -17,10 +17,7 @@ namespace Sell_Shoes.A_DAL.Repositoties
         }
         public List<CthoaDon> GetCthoaDons()
         {
-<<<<<<< HEAD
-=======
-            
->>>>>>> Dev
+
             return qLBG.CthoaDons.ToList(); 
         }
         public bool DeleteHD(int id)

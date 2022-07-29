@@ -108,10 +108,5 @@ namespace Sell_Shoes.Views
             
             
         }
-
-        private void dtp_DateStop_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
