@@ -7,17 +7,15 @@ namespace Sell_Shoes.A_DAL.Models
     {
         public SanPham()
         {
-            HoaDons = new HashSet<HoaDon>();
+            CthoaDons = new HashSet<CthoaDon>();
         }
 
-        public string IdSanPham { get; set; } = null!;
-        public string? IdNhanHang { get; set; }
-        public string? Name { get; set; }
-        public DateTime? Ngaynhap { get; set; }
-        public int? Soluong { get; set; }
-        public decimal? Dongia { get; set; }
+        public string MaSanpham { get; set; } = null!;
+        public string? Ten { get; set; }
+        public decimal? Dongianhap { get; set; }
+        public int? Soluongcon { get; set; }
+        public string? Tenhang { get; set; }
 
-        public virtual NhanHang? IdNhanHangNavigation { get; set; }
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual ICollection<CthoaDon> CthoaDons { get; set; }
     }
 }

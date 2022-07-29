@@ -5,11 +5,15 @@ namespace Sell_Shoes.A_DAL.Models
 {
     public partial class HoaDon
     {
-        public string IdHoaDon { get; set; } = null!;
-        public string? IdSanPham { get; set; }
-        public DateTime? Ngayxuat { get; set; }
-        public int? Soluong { get; set; }
+        public HoaDon()
+        {
+            CthoaDons = new HashSet<CthoaDon>();
+        }
 
-        public virtual SanPham? IdSanPhamNavigation { get; set; }
+        public string MaHoadon { get; set; } = null!;
+        public DateTime? Ngaylap { get; set; }
+        public decimal? Thanhtien { get; set; }
+
+        public virtual ICollection<CthoaDon> CthoaDons { get; set; }
     }
 }

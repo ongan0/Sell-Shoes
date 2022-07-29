@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sell_Shoes;
 
 namespace Sell_Shoes.Views
 {
@@ -15,6 +16,12 @@ namespace Sell_Shoes.Views
         public TongHopCN_QL()
         {
             InitializeComponent();
+        }
+
+        private void btn_Hoadon_Click(object sender, EventArgs e)
+        {
+            HoaDon_QL hoaDon_QL = new HoaDon_QL();
+            hoaDon_QL.ShowDialog();
         }
     }
 }
