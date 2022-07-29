@@ -27,5 +27,9 @@ namespace Sell_Shoes.B_BUS.Services
         {
             return hdRepos.DeleteHD(id)? "Xóa thành công" : "Xóa thất bại";
         }
+        public List<HoaDon> SearchHD(DateTime start, DateTime stop)
+        {
+            return hdRepos.SearchHD(start, stop);
+        }
     }
 }

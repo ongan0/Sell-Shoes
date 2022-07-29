@@ -49,6 +49,7 @@
             this.dtp_DateStop.Name = "dtp_DateStop";
             this.dtp_DateStop.Size = new System.Drawing.Size(126, 27);
             this.dtp_DateStop.TabIndex = 17;
+            this.dtp_DateStop.ValueChanged += new System.EventHandler(this.dtp_DateStop_ValueChanged);
             // 
             // btn_Thoat
             // 
@@ -88,7 +89,7 @@
             this.dtg_ShowHD.Name = "dtg_ShowHD";
             this.dtg_ShowHD.RowHeadersWidth = 51;
             this.dtg_ShowHD.RowTemplate.Height = 29;
-            this.dtg_ShowHD.Size = new System.Drawing.Size(536, 389);
+            this.dtg_ShowHD.Size = new System.Drawing.Size(462, 389);
             this.dtg_ShowHD.TabIndex = 11;
             this.dtg_ShowHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_ShowHD_CellClick);
             // 

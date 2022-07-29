@@ -26,6 +26,7 @@ namespace Sell_Shoes.Views
 
         public void LoadDTGShow(List<HoaDon> hoaDons)
         {
+            dtg_ShowHD.DataSource = null;
             dtg_ShowHD.Rows.Clear();
             dtg_ShowHD.ColumnCount = 4;
             dtg_ShowHD.Columns[0].Name = "Id";
@@ -67,16 +68,31 @@ namespace Sell_Shoes.Views
         }
         private void dtg_ShowHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tbt_Id.Text = dtg_ShowHD.CurrentRow.Cells[0].Value.ToString();
-            int id = Convert.ToInt32(tbt_Id.Text);
-            LoadDTShowCT(id, hdSV.ShowCTHoaDon());
+            try
+            {
+                tbt_Id.Text = dtg_ShowHD.CurrentRow.Cells[0].Value.ToString();
+                int id = Convert.ToInt32(tbt_Id.Text);
+                LoadDTShowCT(id, hdSV.ShowCTHoaDon());
+            }
+            catch (Exception)
+            {
+                tbt_Id.Text = "";
+                dtg_ShowCT.Rows.Clear();
+            }
+            
         }
         private void btt_Delete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(tbt_Id.Text);
             MessageBox.Show(hdSV.DeleteHD(id));
             LoadDTGShow(hdSV.ShowHoaDon());
-            
+        }
+
+        private void dtp_DateStop_ValueChanged(object sender, EventArgs e)
+        {
+            var start = Convert.ToDateTime(dtp_DateStart.Value);
+            var stop = Convert.ToDateTime(dtp_DateStop.Value);
+            dtg_ShowHD.DataSource = hdSV.SearchHD(start,stop);
         }
 
         private void dtp_DateStop_ValueChanged(object sender, EventArgs e)
