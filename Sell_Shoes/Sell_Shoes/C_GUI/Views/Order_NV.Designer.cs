@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(87, 46);
+            this.label1.Location = new System.Drawing.Point(12, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 23);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // btn_Timma
             // 
             this.btn_Timma.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Timma.Location = new System.Drawing.Point(679, 40);
+            this.btn_Timma.Location = new System.Drawing.Point(612, 38);
             this.btn_Timma.Name = "btn_Timma";
             this.btn_Timma.Size = new System.Drawing.Size(94, 29);
             this.btn_Timma.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(258, 42);
+            this.textBox1.Location = new System.Drawing.Point(188, 40);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(379, 27);
             this.textBox1.TabIndex = 3;
