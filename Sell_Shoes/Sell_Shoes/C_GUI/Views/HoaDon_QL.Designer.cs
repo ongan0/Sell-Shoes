@@ -79,6 +79,7 @@
             this.dtp_DateStart.Name = "dtp_DateStart";
             this.dtp_DateStart.Size = new System.Drawing.Size(126, 27);
             this.dtp_DateStart.TabIndex = 12;
+            this.dtp_DateStart.ValueChanged += new System.EventHandler(this.dtp_DateStart_ValueChanged);
             // 
             // dtg_ShowHD
             // 
