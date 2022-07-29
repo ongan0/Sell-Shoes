@@ -49,6 +49,7 @@
             this.dtp_DateStop.Name = "dtp_DateStop";
             this.dtp_DateStop.Size = new System.Drawing.Size(126, 27);
             this.dtp_DateStop.TabIndex = 17;
+            this.dtp_DateStop.ValueChanged += new System.EventHandler(this.dtp_DateStop_ValueChanged);
             // 
             // btn_Thoat
             // 
