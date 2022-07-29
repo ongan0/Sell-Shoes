@@ -56,11 +56,30 @@ namespace Sell_Shoes.A_DAL.Models
                 entity.Property(e => e.Tongtien)
                     .HasColumnType("money")
                     .HasColumnName("tongtien");
+<<<<<<< HEAD
+=======
+
+                entity.HasOne(d => d.MaSanphamNavigation)
+                    .WithMany(p => p.CthoaDons)
+                    .HasForeignKey(d => d.MaSanpham)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_CTHoaDon_HoaDon");
+
+                entity.HasOne(d => d.MaSanpham1)
+                    .WithMany(p => p.CthoaDons)
+                    .HasForeignKey(d => d.MaSanpham)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_CTHoaDon_SanPham");
+>>>>>>> Dev
             });
 
             modelBuilder.Entity<DoanhThu>(entity =>
             {
+<<<<<<< HEAD
                 entity.HasKey(e => e.Ngayxuat);
+=======
+                entity.HasKey(e => e.MaDoanhthu);
+>>>>>>> Dev
 
                 entity.ToTable("DoanhThu");
 

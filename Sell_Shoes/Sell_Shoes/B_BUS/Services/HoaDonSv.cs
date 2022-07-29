@@ -19,5 +19,13 @@ namespace Sell_Shoes.B_BUS.Services
         {
             return hdRepos.GetHoaDon();
         }
+        public List<CthoaDon> ShowCTHoaDon()
+        {
+            return hdRepos.GetCthoaDons();
+        }
+        public string DeleteHD(int id)
+        {
+            return hdRepos.DeleteHD(id)? "Xóa thành công" : "Xóa thất bại";
+        }
     }
 }

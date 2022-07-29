@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DateStop = new System.Windows.Forms.DateTimePicker();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Hienthi = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DateStart = new System.Windows.Forms.DateTimePicker();
             this.dtg_ShowHD = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btt_Delete = new System.Windows.Forms.Button();
+            this.tbt_Id = new System.Windows.Forms.TextBox();
+            this.dtg_ShowCT = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowHD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowCT)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker2
+            // dtp_DateStop
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(348, 47);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(126, 27);
-            this.dateTimePicker2.TabIndex = 17;
+            this.dtp_DateStop.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_DateStop.Location = new System.Drawing.Point(348, 47);
+            this.dtp_DateStop.Name = "dtp_DateStop";
+            this.dtp_DateStop.Size = new System.Drawing.Size(126, 27);
+            this.dtp_DateStop.TabIndex = 17;
             // 
             // btn_Thoat
             // 
@@ -72,13 +71,13 @@
             this.btn_Hienthi.UseVisualStyleBackColor = true;
             this.btn_Hienthi.Click += new System.EventHandler(this.btn_Hienthi_Click);
             // 
-            // dateTimePicker1
+            // dtp_DateStart
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(167, 47);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(126, 27);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dtp_DateStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_DateStart.Location = new System.Drawing.Point(167, 47);
+            this.dtp_DateStart.Name = "dtp_DateStart";
+            this.dtp_DateStart.Size = new System.Drawing.Size(126, 27);
+            this.dtp_DateStart.TabIndex = 12;
             // 
             // dtg_ShowHD
             // 
@@ -91,67 +90,54 @@
             this.dtg_ShowHD.RowTemplate.Height = 29;
             this.dtg_ShowHD.Size = new System.Drawing.Size(536, 389);
             this.dtg_ShowHD.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(940, 382);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 23);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Ngày";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(940, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 23);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Tên";
+            this.dtg_ShowHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_ShowHD_CellClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(940, 202);
+            this.label1.Location = new System.Drawing.Point(594, 397);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 23);
             this.label1.TabIndex = 18;
             this.label1.Text = "Mã";
             // 
-            // button1
+            // btt_Delete
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(1018, 466);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 47);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Xóa hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btt_Delete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btt_Delete.Location = new System.Drawing.Point(1005, 412);
+            this.btt_Delete.Name = "btt_Delete";
+            this.btt_Delete.Size = new System.Drawing.Size(158, 47);
+            this.btt_Delete.TabIndex = 21;
+            this.btt_Delete.Text = "Xóa hóa đơn";
+            this.btt_Delete.UseVisualStyleBackColor = true;
+            this.btt_Delete.Click += new System.EventHandler(this.btt_Delete_Click);
             // 
-            // textBox1
+            // tbt_Id
             // 
-            this.textBox1.Location = new System.Drawing.Point(1008, 202);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 27);
-            this.textBox1.TabIndex = 22;
+            this.tbt_Id.Location = new System.Drawing.Point(706, 393);
+            this.tbt_Id.Name = "tbt_Id";
+            this.tbt_Id.Size = new System.Drawing.Size(168, 27);
+            this.tbt_Id.TabIndex = 22;
             // 
-            // textBox2
+            // dtg_ShowCT
             // 
-            this.textBox2.Location = new System.Drawing.Point(1008, 293);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 27);
-            this.textBox2.TabIndex = 23;
+            this.dtg_ShowCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_ShowCT.Location = new System.Drawing.Point(594, 93);
+            this.dtg_ShowCT.Name = "dtg_ShowCT";
+            this.dtg_ShowCT.RowHeadersWidth = 51;
+            this.dtg_ShowCT.RowTemplate.Height = 29;
+            this.dtg_ShowCT.Size = new System.Drawing.Size(554, 219);
+            this.dtg_ShowCT.TabIndex = 25;
             // 
-            // textBox3
+            // label2
             // 
-            this.textBox3.Location = new System.Drawing.Point(1008, 382);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 27);
-            this.textBox3.TabIndex = 24;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(594, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Chi tiết hóa đơn";
             // 
             // HoaDon_QL
             // 
@@ -159,21 +145,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1188, 525);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtg_ShowCT);
+            this.Controls.Add(this.tbt_Id);
+            this.Controls.Add(this.btt_Delete);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtp_DateStop);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Hienthi);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_DateStart);
             this.Controls.Add(this.dtg_ShowHD);
             this.Name = "HoaDon_QL";
             this.Text = "HoaDon_QL";
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowHD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowCT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,17 +166,15 @@
 
         #endregion
 
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtp_DateStop;
         private Button btn_Thoat;
         private Button btn_Hienthi;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtp_DateStart;
         private DataGridView dtg_ShowHD;
-        private Label label3;
-        private Label label2;
         private Label label1;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private Button btt_Delete;
+        private TextBox tbt_Id;
+        private DataGridView dtg_ShowCT;
+        private Label label2;
     }
 }

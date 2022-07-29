@@ -5,6 +5,14 @@ namespace Sell_Shoes.A_DAL.Models
 {
     public partial class SanPham
     {
+<<<<<<< HEAD
+=======
+        public SanPham()
+        {
+            CthoaDons = new HashSet<CthoaDon>();
+        }
+
+>>>>>>> Dev
         public int MaSanpham { get; set; }
         public string? Ten { get; set; }
         public decimal? Dongianhap { get; set; }
