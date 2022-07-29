@@ -17,8 +17,8 @@ namespace Sell_Shoes.A_DAL.Repositoties
         }
         public List<CthoaDon> GetCthoaDons()
         {
-            //var result = qLBG.CthoaDons.Where(p => p.MaHoadon == hoaDon.MaHoadon);
-            return qLBG.CthoaDons.ToList(); //result.ToList();
+            
+            return qLBG.CthoaDons.ToList(); 
         }
         public bool DeleteHD(int id)
         {
