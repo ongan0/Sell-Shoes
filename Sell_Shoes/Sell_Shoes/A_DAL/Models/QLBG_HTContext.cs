@@ -56,8 +56,6 @@ namespace Sell_Shoes.A_DAL.Models
                 entity.Property(e => e.Tongtien)
                     .HasColumnType("money")
                     .HasColumnName("tongtien");
-<<<<<<< HEAD
-=======
 
                 entity.HasOne(d => d.MaSanphamNavigation)
                     .WithMany(p => p.CthoaDons)
@@ -70,35 +68,28 @@ namespace Sell_Shoes.A_DAL.Models
                     .HasForeignKey(d => d.MaSanpham)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_CTHoaDon_SanPham");
->>>>>>> Dev
             });
 
             modelBuilder.Entity<DoanhThu>(entity =>
             {
-<<<<<<< HEAD
-                entity.HasKey(e => e.Ngayxuat);
-=======
                 entity.HasKey(e => e.MaDoanhthu);
->>>>>>> Dev
 
                 entity.ToTable("DoanhThu");
 
-                entity.Property(e => e.Ngayxuat)
-                    .HasColumnType("date")
-                    .HasColumnName("ngayxuat");
+                entity.Property(e => e.MaDoanhthu).HasColumnName("ma_doanhthu");
 
                 entity.Property(e => e.Doanhthu1)
                     .HasColumnType("money")
                     .HasColumnName("doanhthu");
 
-                entity.Property(e => e.MaDoanhthu)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ma_doanhthu");
+                entity.Property(e => e.Ngayxuat)
+                    .HasColumnType("date")
+                    .HasColumnName("ngayxuat");
             });
 
             modelBuilder.Entity<HoaDon>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.MaHoadon);
 
                 entity.ToTable("HoaDon");
 
