@@ -9,10 +9,31 @@ namespace Sell_Shoes.A_DAL.Repositoties
 {
     internal class HoaDonRepos
     {
+        HoaDon hoaDon = new HoaDon();
         QLBG_HTContext qLBG = new QLBG_HTContext();
         public List<HoaDon> GetHoaDon()
         {
             return qLBG.HoaDons.ToList();
+        }
+        public List<CthoaDon> GetCthoaDons()
+        {
+            //var result = qLBG.CthoaDons.Where(p => p.MaHoadon == hoaDon.MaHoadon);
+            return qLBG.CthoaDons.ToList(); //result.ToList();
+        }
+        public bool DeleteHD(int id)
+        {
+            try
+            {
+                var hoadon = qLBG.HoaDons.FirstOrDefault(p => p.MaHoadon == id);
+                qLBG.HoaDons.Remove(hoadon);
+                qLBG.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
         }
     }
 }

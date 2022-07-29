@@ -39,15 +39,9 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.ToTable("CTHoaDon");
 
-                entity.Property(e => e.MaSanpham)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_sanpham")
-                    .IsFixedLength();
+                entity.Property(e => e.MaSanpham).HasColumnName("ma_sanpham");
 
-                entity.Property(e => e.MaHoadon)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_hoadon")
-                    .IsFixedLength();
+                entity.Property(e => e.MaHoadon).HasColumnName("ma_hoadon");
 
                 entity.Property(e => e.Dongiaban)
                     .HasColumnType("money")
@@ -63,13 +57,13 @@ namespace Sell_Shoes.A_DAL.Models
                     .HasColumnType("money")
                     .HasColumnName("tongtien");
 
-                entity.HasOne(d => d.MaHoadonNavigation)
+                entity.HasOne(d => d.MaSanphamNavigation)
                     .WithMany(p => p.CthoaDons)
-                    .HasForeignKey(d => d.MaHoadon)
+                    .HasForeignKey(d => d.MaSanpham)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_CTHoaDon_HoaDon");
 
-                entity.HasOne(d => d.MaSanphamNavigation)
+                entity.HasOne(d => d.MaSanpham1)
                     .WithMany(p => p.CthoaDons)
                     .HasForeignKey(d => d.MaSanpham)
                     .OnDelete(DeleteBehavior.ClientSetNull)
@@ -78,8 +72,7 @@ namespace Sell_Shoes.A_DAL.Models
 
             modelBuilder.Entity<DoanhThu>(entity =>
             {
-                entity.HasKey(e => e.MaDoanhthu)
-                    .HasName("PK__DoanhThu__D306E3BA7917BEE6");
+                entity.HasKey(e => e.MaDoanhthu);
 
                 entity.ToTable("DoanhThu");
 
@@ -100,10 +93,7 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.ToTable("HoaDon");
 
-                entity.Property(e => e.MaHoadon)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_hoadon")
-                    .IsFixedLength();
+                entity.Property(e => e.MaHoadon).HasColumnName("ma_hoadon");
 
                 entity.Property(e => e.Ngaylap)
                     .HasColumnType("date")
@@ -120,10 +110,7 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.ToTable("SanPham");
 
-                entity.Property(e => e.MaSanpham)
-                    .HasMaxLength(10)
-                    .HasColumnName("ma_sanpham")
-                    .IsFixedLength();
+                entity.Property(e => e.MaSanpham).HasColumnName("ma_sanpham");
 
                 entity.Property(e => e.Dongianhap)
                     .HasColumnType("money")

@@ -6,13 +6,13 @@ namespace Sell_Shoes.A_DAL.Models
     public partial class CthoaDon
     {
         public int MaCthoadon { get; set; }
-        public string MaSanpham { get; set; } = null!;
-        public string MaHoadon { get; set; } = null!;
+        public int MaSanpham { get; set; }
+        public int MaHoadon { get; set; }
         public int? Soluongmua { get; set; }
         public decimal? Dongiaban { get; set; }
         public decimal? Tongtien { get; set; }
 
-        public virtual HoaDon MaHoadonNavigation { get; set; } = null!;
-        public virtual SanPham MaSanphamNavigation { get; set; } = null!;
+        public virtual SanPham MaSanpham1 { get; set; } = null!;
+        public virtual HoaDon MaSanphamNavigation { get; set; } = null!;
     }
 }
