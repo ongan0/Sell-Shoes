@@ -57,6 +57,7 @@
             this.btn_Sanpham.TabIndex = 1;
             this.btn_Sanpham.Text = "Sản phẩm";
             this.btn_Sanpham.UseVisualStyleBackColor = false;
+            this.btn_Sanpham.Click += new System.EventHandler(this.btn_Sanpham_Click);
             // 
             // btn_Hoadon
             // 

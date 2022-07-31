@@ -23,5 +23,11 @@ namespace Sell_Shoes.Views
             HoaDon_QL hoaDon_QL = new HoaDon_QL();
             hoaDon_QL.ShowDialog();
         }
+
+        private void btn_Sanpham_Click(object sender, EventArgs e)
+        {
+            SanPham_QL sanPham_QL = new SanPham_QL();
+            sanPham_QL.ShowDialog();
+        }
     }
 }

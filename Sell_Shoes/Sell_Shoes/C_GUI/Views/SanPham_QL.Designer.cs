@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_ShowAll = new System.Windows.Forms.Button();
+            this.dtg_Show = new System.Windows.Forms.DataGridView();
             this.btn_Them = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
@@ -42,64 +42,69 @@
             this.tbt_Soluong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Thoat = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Show)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_ShowAll
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(746, 504);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 44);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Danh sách";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_ShowAll.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ShowAll.Location = new System.Drawing.Point(729, 488);
+            this.btn_ShowAll.Name = "btn_ShowAll";
+            this.btn_ShowAll.Size = new System.Drawing.Size(169, 44);
+            this.btn_ShowAll.TabIndex = 0;
+            this.btn_ShowAll.Text = "Danh sách";
+            this.btn_ShowAll.UseVisualStyleBackColor = true;
+            this.btn_ShowAll.Click += new System.EventHandler(this.btn_ShowAll_Click);
             // 
-            // dataGridView1
+            // dtg_Show
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(577, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(451, 436);
-            this.dataGridView1.TabIndex = 1;
+            this.dtg_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_Show.Location = new System.Drawing.Point(577, 34);
+            this.dtg_Show.Name = "dtg_Show";
+            this.dtg_Show.RowHeadersWidth = 51;
+            this.dtg_Show.RowTemplate.Height = 29;
+            this.dtg_Show.Size = new System.Drawing.Size(451, 436);
+            this.dtg_Show.TabIndex = 1;
+            this.dtg_Show.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Show_CellClick);
             // 
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Them.Location = new System.Drawing.Point(56, 439);
+            this.btn_Them.Location = new System.Drawing.Point(31, 439);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(101, 31);
             this.btn_Them.TabIndex = 2;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Sua.Location = new System.Drawing.Point(225, 439);
+            this.btn_Sua.Location = new System.Drawing.Point(231, 439);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(111, 31);
             this.btn_Sua.TabIndex = 3;
             this.btn_Sua.Text = "Sửa ";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Xoa.Location = new System.Drawing.Point(407, 439);
+            this.btn_Xoa.Location = new System.Drawing.Point(425, 439);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(109, 31);
             this.btn_Xoa.TabIndex = 4;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(30, 107);
+            this.label1.Location = new System.Drawing.Point(31, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 23);
             this.label1.TabIndex = 5;
@@ -109,7 +114,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(30, 190);
+            this.label2.Location = new System.Drawing.Point(33, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 23);
             this.label2.TabIndex = 6;
@@ -119,7 +124,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(30, 284);
+            this.label3.Location = new System.Drawing.Point(29, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 23);
             this.label3.TabIndex = 7;
@@ -127,28 +132,29 @@
             // 
             // tbt_Ten
             // 
-            this.tbt_Ten.Location = new System.Drawing.Point(174, 100);
+            this.tbt_Ten.Location = new System.Drawing.Point(174, 94);
             this.tbt_Ten.Name = "tbt_Ten";
             this.tbt_Ten.Size = new System.Drawing.Size(288, 27);
             this.tbt_Ten.TabIndex = 8;
+            this.tbt_Ten.TextChanged += new System.EventHandler(this.tbt_Ten_TextChanged);
             // 
             // tbt_Ma
             // 
-            this.tbt_Ma.Location = new System.Drawing.Point(174, 183);
+            this.tbt_Ma.Location = new System.Drawing.Point(174, 177);
             this.tbt_Ma.Name = "tbt_Ma";
             this.tbt_Ma.Size = new System.Drawing.Size(288, 27);
             this.tbt_Ma.TabIndex = 9;
             // 
             // tbt_Gia
             // 
-            this.tbt_Gia.Location = new System.Drawing.Point(174, 277);
+            this.tbt_Gia.Location = new System.Drawing.Point(174, 264);
             this.tbt_Gia.Name = "tbt_Gia";
             this.tbt_Gia.Size = new System.Drawing.Size(288, 27);
             this.tbt_Gia.TabIndex = 10;
             // 
             // tbt_Soluong
             // 
-            this.tbt_Soluong.Location = new System.Drawing.Point(174, 364);
+            this.tbt_Soluong.Location = new System.Drawing.Point(174, 355);
             this.tbt_Soluong.Name = "tbt_Soluong";
             this.tbt_Soluong.Size = new System.Drawing.Size(288, 27);
             this.tbt_Soluong.TabIndex = 11;
@@ -157,7 +163,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(30, 371);
+            this.label4.Location = new System.Drawing.Point(29, 355);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 12;
@@ -166,9 +172,9 @@
             // btn_Thoat
             // 
             this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Thoat.Location = new System.Drawing.Point(907, 578);
+            this.btn_Thoat.Location = new System.Drawing.Point(880, 578);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(121, 48);
+            this.btn_Thoat.Size = new System.Drawing.Size(168, 48);
             this.btn_Thoat.TabIndex = 16;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -191,11 +197,11 @@
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Them);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dtg_Show);
+            this.Controls.Add(this.btn_ShowAll);
             this.Name = "SanPham_QL";
             this.Text = "SanPham";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Show)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,8 +209,8 @@
 
         #endregion
 
-        private Button button1;
-        private DataGridView dataGridView1;
+        private Button btn_ShowAll;
+        private DataGridView dtg_Show;
         private Button btn_Them;
         private Button btn_Sua;
         private Button btn_Xoa;
