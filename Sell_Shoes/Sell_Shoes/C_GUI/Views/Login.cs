@@ -28,7 +28,7 @@ namespace Sell_Shoes.Views
         private void btt_Login_Click(object sender, EventArgs e)
         {
        
-
+            // toi da sua code 
         
             if (tbt_TenDangNhap.Text.Trim() == String.Empty || tbt_MatKhau.Text.Trim() == "")
             {
