@@ -26,8 +26,8 @@ namespace Sell_Shoes.Views
 
         public void LoadDTGShow(List<HoaDon> hoaDons)
         {
-            dtg_ShowHD.DataSource = null;
             dtg_ShowHD.Rows.Clear();
+            dtg_ShowHD.DataSource = null;
             dtg_ShowHD.ColumnCount = 4;
             dtg_ShowHD.Columns[0].Name = "Id";
             dtg_ShowHD.Columns[1].Name = "Ngày tạo";
@@ -59,8 +59,9 @@ namespace Sell_Shoes.Views
         }
         private void btn_Hienthi_Click(object sender, EventArgs e)
         {
-            if (dtg_ShowHD.Rows.Count > 1)
+            if (dtg_ShowHD.Rows.Count > 1 || dtg_ShowHD.Columns.Count > 4)
             {
+                dtg_ShowHD.DataSource = null;
                 dtg_ShowHD.Rows.Clear();
             }
             else
@@ -94,9 +95,7 @@ namespace Sell_Shoes.Views
             var start = Convert.ToDateTime(dtp_DateStart.Value);
             var stop = Convert.ToDateTime(dtp_DateStop.Value);
             
-                dtg_ShowHD.DataSource = hdSV.SearchHD(start, stop);
-            
-            
+                LoadDTGShow(hdSV.SearchHD(start, stop));
         }
 
         private void dtp_DateStart_ValueChanged(object sender, EventArgs e)
@@ -104,8 +103,7 @@ namespace Sell_Shoes.Views
             var start = Convert.ToDateTime(dtp_DateStart.Value);
             var stop = Convert.ToDateTime(dtp_DateStop.Value);
             
-                dtg_ShowHD.DataSource = hdSV.SearchHD(start, stop);
-            
+                LoadDTGShow(hdSV.SearchHD(start, stop));
             
         }
     }

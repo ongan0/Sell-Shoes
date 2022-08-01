@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FPTSHOP\\Desktop\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj": {}
+    "D:\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FPTSHOP\\Desktop\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj": {
+    "D:\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FPTSHOP\\Desktop\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj",
+        "projectUniqueName": "D:\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj",
         "projectName": "Sell_Shoes",
-        "projectPath": "C:\\Users\\FPTSHOP\\Desktop\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FPTSHOP\\Desktop\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\obj\\",
+        "projectPath": "D:\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\Sell_Shoes.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\MOB104\\Sell-Shoes\\Sell_Shoes\\Sell_Shoes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -77,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
