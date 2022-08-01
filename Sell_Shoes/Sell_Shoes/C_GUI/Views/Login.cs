@@ -29,6 +29,7 @@ namespace Sell_Shoes.Views
         {
        
             // toi da sua code 
+//Tuấn đây
         
             if (tbt_TenDangNhap.Text.Trim() == String.Empty || tbt_MatKhau.Text.Trim() == "")
             {
