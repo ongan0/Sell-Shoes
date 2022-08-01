@@ -53,7 +53,7 @@ namespace Sell_Shoes.Views
 
                     var name = htContext.SanPhams.FirstOrDefault(p => p.MaSanpham == hoaDonCT.MaSanpham).Ten.ToString();
 
-                    dtg_ShowCT.Rows.Add(name, hoaDonCT.Soluongmua, hoaDonCT.Dongiaban, hoaDonCT.Tongtien);
+                    dtg_ShowCT.Rows.Add(name, hoaDonCT.Soluongmua,hoaDonCT.Dongiaban, hoaDonCT.Tongtien);
                 }
             }
         }
@@ -105,6 +105,12 @@ namespace Sell_Shoes.Views
             
                 LoadDTGShow(hdSV.SearchHD(start, stop));
             
+        }
+
+        private void btt_out_Click(object sender, EventArgs e)
+        {
+            TongHopCN_QL tongHopCN_QL = new TongHopCN_QL();
+            tongHopCN_QL.ShowDialog();
         }
     }
 }

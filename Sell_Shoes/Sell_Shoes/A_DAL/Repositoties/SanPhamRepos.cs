@@ -63,20 +63,6 @@ namespace Sell_Shoes.A_DAL.Repositoties
                 MessageBox.Show(e.Message); return false;
             }
         }
-        //public bool DeleteGiayByName(string ten)
-        //{
-        //    try
-        //    {
-        //        var sanpham = qLBG.SanPhams.Where(p => p.Ten == ten);
-        //        qLBG.SanPhams.RemoveRange(sanpham);
-        //        qLBG.SaveChanges();
-        //        return true;
-
-        //    }
-        //    catch(Exception e)
-        //    {
-        //        MessageBox.Show(e.Message); return false;
-        //    }
-        //}
+        
     }
 }

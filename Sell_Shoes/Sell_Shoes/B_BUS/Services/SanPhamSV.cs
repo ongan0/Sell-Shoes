@@ -41,16 +41,6 @@ namespace Sell_Shoes.B_BUS.Services
             return spRepos.DeleteSanPham(masanpham) ? "thêm thành công" : "thêm thất bại";
 
         }
-        //public string DeleteGiayByName(string ten)
-        //{
-        //    if (spRepos.DeleteGiayByName(ten))
-        //    {
-        //        return $"đã xóa tất cả xe có tên là : {ten}";
-        //    }
-        //    else
-        //    {
-        //        return "xóa thất bại";
-        //    }
-        //}
+        
     }
 }

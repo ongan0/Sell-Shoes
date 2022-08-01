@@ -38,6 +38,7 @@
             this.tbt_Id = new System.Windows.Forms.TextBox();
             this.dtg_ShowCT = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btt_out = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowCT)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +108,7 @@
             // btt_Delete
             // 
             this.btt_Delete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btt_Delete.Location = new System.Drawing.Point(1005, 412);
+            this.btt_Delete.Location = new System.Drawing.Point(990, 373);
             this.btt_Delete.Name = "btt_Delete";
             this.btt_Delete.Size = new System.Drawing.Size(158, 47);
             this.btt_Delete.TabIndex = 21;
@@ -141,12 +142,23 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Chi tiết hóa đơn";
             // 
+            // btt_out
+            // 
+            this.btt_out.Location = new System.Drawing.Point(1054, 453);
+            this.btt_out.Name = "btt_out";
+            this.btt_out.Size = new System.Drawing.Size(94, 29);
+            this.btt_out.TabIndex = 27;
+            this.btt_out.Text = "Thoát";
+            this.btt_out.UseVisualStyleBackColor = true;
+            this.btt_out.Click += new System.EventHandler(this.btt_out_Click);
+            // 
             // HoaDon_QL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1188, 525);
+            this.Controls.Add(this.btt_out);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtg_ShowCT);
             this.Controls.Add(this.tbt_Id);
@@ -178,5 +190,6 @@
         private TextBox tbt_Id;
         private DataGridView dtg_ShowCT;
         private Label label2;
+        private Button btt_out;
     }
 }

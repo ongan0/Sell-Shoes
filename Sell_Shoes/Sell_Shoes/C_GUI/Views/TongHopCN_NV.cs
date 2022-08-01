@@ -16,5 +16,11 @@ namespace Sell_Shoes.Views
         {
             InitializeComponent();
         }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.ShowDialog();
+        }
     }
 }

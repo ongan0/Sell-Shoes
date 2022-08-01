@@ -21,17 +21,7 @@ namespace Sell_Shoes.Views
         {
             InitializeComponent();
         }
-        public void LoadDataToGridView(List<DoanhThu> doanhThus)
-        {
-            //dtg_ShowDT.ColumnCount = 5;
-            //dtg_ShowDT.Columns[0].Name = "mã sản phẩm";
-            //dtg_ShowDT.Columns[1].Name = "Ngày Xuất";
-            //dtg_ShowDT.Columns[2].Name = "Doanh Thu 1";
-            //foreach(var item in doanhThus)
-            //{
-            //    dtg_ShowDT.Rows.Add(item.madoa)
-            //}
-        }
+        
 
         private void btn_DoanhThu_Click(object sender, EventArgs e)
         {

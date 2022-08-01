@@ -32,10 +32,8 @@
             this.btn_Order = new System.Windows.Forms.Button();
             this.btn_Hoadon = new System.Windows.Forms.Button();
             this.btn_Doanhthu = new System.Windows.Forms.Button();
-            this.btn_Kiemkho = new System.Windows.Forms.Button();
             this.btn_Support = new System.Windows.Forms.Button();
             this.btn_Logout = new System.Windows.Forms.Button();
-            this.btn_Thoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,22 +79,11 @@
             this.btn_Doanhthu.Text = "Doanh thu";
             this.btn_Doanhthu.UseVisualStyleBackColor = false;
             // 
-            // btn_Kiemkho
-            // 
-            this.btn_Kiemkho.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Kiemkho.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Kiemkho.Location = new System.Drawing.Point(86, 245);
-            this.btn_Kiemkho.Name = "btn_Kiemkho";
-            this.btn_Kiemkho.Size = new System.Drawing.Size(121, 48);
-            this.btn_Kiemkho.TabIndex = 4;
-            this.btn_Kiemkho.Text = "Kiểm kho ";
-            this.btn_Kiemkho.UseVisualStyleBackColor = false;
-            // 
             // btn_Support
             // 
             this.btn_Support.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_Support.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Support.Location = new System.Drawing.Point(327, 245);
+            this.btn_Support.Location = new System.Drawing.Point(206, 255);
             this.btn_Support.Name = "btn_Support";
             this.btn_Support.Size = new System.Drawing.Size(121, 48);
             this.btn_Support.TabIndex = 5;
@@ -107,23 +94,13 @@
             // 
             this.btn_Logout.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Logout.Location = new System.Drawing.Point(570, 245);
+            this.btn_Logout.Location = new System.Drawing.Point(432, 255);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(121, 48);
             this.btn_Logout.TabIndex = 6;
             this.btn_Logout.Text = "Logout";
             this.btn_Logout.UseVisualStyleBackColor = false;
-            // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Thoat.Location = new System.Drawing.Point(641, 380);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(121, 48);
-            this.btn_Thoat.TabIndex = 7;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // TongHopCN_NV
             // 
@@ -131,10 +108,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(787, 440);
-            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Logout);
             this.Controls.Add(this.btn_Support);
-            this.Controls.Add(this.btn_Kiemkho);
             this.Controls.Add(this.btn_Doanhthu);
             this.Controls.Add(this.btn_Hoadon);
             this.Controls.Add(this.btn_Order);
@@ -152,9 +127,7 @@
         private Button btn_Order;
         private Button btn_Hoadon;
         private Button btn_Doanhthu;
-        private Button btn_Kiemkho;
         private Button btn_Support;
         private Button btn_Logout;
-        private Button btn_Thoat;
     }
 }

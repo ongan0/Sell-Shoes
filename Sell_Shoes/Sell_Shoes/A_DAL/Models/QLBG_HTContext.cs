@@ -26,7 +26,7 @@ namespace Sell_Shoes.A_DAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=NGUYENQUANGDUNG\\SQLEXPRESS;Database=QLBG_HT;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.;Database=QLBG_HT;Trusted_Connection=True;");
             }
         }
 
@@ -43,13 +43,12 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.Property(e => e.MaHoadon).HasColumnName("ma_hoadon");
 
-                entity.Property(e => e.Dongiaban)
-                    .HasColumnType("money")
-                    .HasColumnName("dongiaban");
-
                 entity.Property(e => e.MaCthoadon)
                     .ValueGeneratedOnAdd()
                     .HasColumnName("ma_cthoadon");
+                entity.Property(e => e.Dongiaban)
+                    .HasColumnType("money")
+                    .HasColumnName("dongiaban");
 
                 entity.Property(e => e.Soluongmua).HasColumnName("soluongmua");
 
@@ -111,6 +110,10 @@ namespace Sell_Shoes.A_DAL.Models
                 entity.ToTable("SanPham");
 
                 entity.Property(e => e.MaSanpham).HasColumnName("ma_sanpham");
+
+                entity.Property(e => e.Dongiaban)
+                    .HasColumnType("money")
+                    .HasColumnName("dongiaban");
 
                 entity.Property(e => e.Dongianhap)
                     .HasColumnType("money")
