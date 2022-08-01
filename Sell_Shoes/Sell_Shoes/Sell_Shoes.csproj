@@ -9,8 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="C_GUI\Resources\**" />
     <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="C_GUI\Resources\**" />
     <EmbeddedResource Remove="Models\**" />
+    <None Remove="C_GUI\Resources\**" />
     <None Remove="Models\**" />
   </ItemGroup>
 
@@ -27,10 +30,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="C_GUI\Resources\" />
   </ItemGroup>
 
   <ItemGroup>
