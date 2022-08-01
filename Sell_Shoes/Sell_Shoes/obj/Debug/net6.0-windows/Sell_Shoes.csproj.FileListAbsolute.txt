@@ -155,6 +155,7 @@ C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Se
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.Support.resources
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.TongHopCN_NV.resources
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.TongHopCN_QL.resources
+C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Properties.Resources.resources
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.csproj.GenerateResource.cache
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.AssemblyInfoInputs.cache
@@ -166,4 +167,3 @@ C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\re
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.pdb
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.genruntimeconfig.cache
 C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\ref\Sell_Shoes.dll
-C:\Users\DELL\Documents\GitHub\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Properties.Resources.resources

@@ -20,10 +20,9 @@ namespace Sell_Shoes.B_BUS.Services
         {
             return spRepos.GetAllSanPham();
         }
-      public string CreateNewGiay(int MaSanpham, string Ten, decimal Dongianhap, int Soluongcon, string Tenhang)
+      public string CreateNewSanPham(string Ten, decimal Dongianhap, int Soluongcon, string Tenhang)
       {
             SanPham sp = new SanPham();
-            sp.MaSanpham = MaSanpham;
             sp.Ten = Ten;
             sp.Dongianhap = Dongianhap;
             sp.Soluongcon = Soluongcon;
@@ -34,7 +33,7 @@ namespace Sell_Shoes.B_BUS.Services
 
         public string UpdateSanPham(int MaSanpham, string Ten, decimal Dongianhap, int Soluongcon, string Tenhang)
         {
-            return spRepos.EditSanPham(MaSanpham, Ten, Dongianhap , Soluongcon , Tenhang) ? "them thanh cong" : "them that bai";
+            return spRepos.EditSanPham(MaSanpham, Ten, Dongianhap , Soluongcon , Tenhang) ? "thêm thành công" : "thêm thất bại";
         }
         
         public string DeleteAGiay(int masanpham)

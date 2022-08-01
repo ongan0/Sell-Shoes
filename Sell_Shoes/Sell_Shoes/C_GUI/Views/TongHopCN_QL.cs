@@ -29,5 +29,12 @@ namespace Sell_Shoes.Views
             SanPham_QL sanPham_QL = new SanPham_QL();
             sanPham_QL.ShowDialog();
         }
+
+        private void btn_Doanhthu_Click(object sender, EventArgs e)
+        {
+
+            DoanhThu doanhThu = new DoanhThu();
+            doanhThu.ShowDialog();
+        }
     }
 }

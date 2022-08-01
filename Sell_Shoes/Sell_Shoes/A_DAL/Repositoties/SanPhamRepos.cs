@@ -36,7 +36,6 @@ namespace Sell_Shoes.A_DAL.Repositoties
             try
             {
                 var sanpham = qLBG.SanPhams.FirstOrDefault(p => p.MaSanpham == MaSanpham);
-                sanpham.MaSanpham = MaSanpham;
                 sanpham.Ten = Ten;
                 sanpham.Dongianhap = Dongianhap;
                 sanpham.Soluongcon = Soluongcon;

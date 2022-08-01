@@ -16,6 +16,7 @@ namespace Sell_Shoes.A_DAL.Models
         public int? Soluongcon { get; set; }
         public string? Tenhang { get; set; }
 
+
         public virtual ICollection<CthoaDon> CthoaDons { get; set; }
     }
 }

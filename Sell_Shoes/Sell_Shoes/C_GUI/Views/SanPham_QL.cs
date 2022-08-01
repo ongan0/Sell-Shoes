@@ -23,9 +23,8 @@ namespace Sell_Shoes.Views
         }
         public void LoadDataToGridView(List<SanPham> sanPhams)
         {
-            dtg_Show.Rows.Clear();
-
             dtg_Show.DataSource = null;
+            dtg_Show.Rows.Clear();
             dtg_Show.ColumnCount = 5;
             dtg_Show.Columns[0].Name = "mã sản phẩm";
             dtg_Show.Columns[1].Name = "tên";
@@ -52,30 +51,33 @@ namespace Sell_Shoes.Views
             }
         }
 
-        private void tbt_Ten_TextChanged(object sender, EventArgs e)
-        {
-            //string 
-            //int ma = Convert.ToInt32(tbt_Ma.Text);
-            //MessageBox.Show(sanPhamSV.CreateNewGiay()
-        }
+      // xóa sự kiện click
+      // sửa phần thêm 
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            int masanpham = Convert.ToInt32(tbt_Ma.Text);
-            string ten = tbt_Ten.Text;
-            decimal dongianhap = Convert.ToDecimal(tbt_Gia.Text);
-            int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-            string tenhang = tbt_Ten.Text;
+            //int masanpham = Convert.ToInt32(tbt_Ma.Text);
+            //string ten = tbt_Ten.Text;
+            //decimal dongianhap = Convert.ToDecimal(tbt_Gia.Text);
+            //int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
+            //string tenhang = tbt_Ten.Text;
+           
+                string ten = tbt_Ten.Text;
+                decimal dongianhap = Convert.ToDecimal(tbt_Gia.Text);
+                int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
+                string tenhang = tbt_TenHang.Text;
+                MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap, soluongcon, tenhang));
+                LoadDataToGridView(sanPhamSV.ShowAllSanPham());
 
-            MessageBox.Show(sanPhamSV.CreateNewGiay(masanpham,ten,dongianhap,soluongcon,tenhang));
-            LoadDataToGridView(sanPhamSV.ShowAllSanPham());
+          
+          
         }
 
         private void dtg_Show_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
                 tbt_Ten.Text = dtg_Show.CurrentRow.Cells[0].Value.ToString();
-                tbt_Ma.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
+                tbt_TenHang.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
                 tbt_Gia.Text = dtg_Show.CurrentRow.Cells[2].Value.ToString();
                 tbt_Soluong.Text = dtg_Show.CurrentRow.Cells[3].Value.ToString();
 
@@ -87,7 +89,7 @@ namespace Sell_Shoes.Views
             string ten = tbt_Ten.Text;
             decimal dongianhap = Convert.ToDecimal(tbt_Gia.Text);
             int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-            string tenhang = tbt_Ten.Text;
+            string tenhang = tbt_TenHang.Text;
             MessageBox.Show(sanPhamSV.UpdateSanPham(masanpham, ten, dongianhap, soluongcon, tenhang));
             LoadDataToGridView(sanPhamSV.ShowAllSanPham());
         }

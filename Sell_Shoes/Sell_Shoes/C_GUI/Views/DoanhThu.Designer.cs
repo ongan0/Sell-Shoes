@@ -30,10 +30,10 @@
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btn_Thongke = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_DoanhThu = new System.Windows.Forms.Button();
+            this.dtg_ShowDT = new System.Windows.Forms.DataGridView();
             this.btn_Thoat = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowDT)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -50,32 +50,33 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(222, 27);
             this.dateTimePicker2.TabIndex = 3;
             // 
-            // btn_Thongke
+            // btn_DoanhThu
             // 
-            this.btn_Thongke.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Thongke.Location = new System.Drawing.Point(356, 43);
-            this.btn_Thongke.Name = "btn_Thongke";
-            this.btn_Thongke.Size = new System.Drawing.Size(117, 37);
-            this.btn_Thongke.TabIndex = 4;
-            this.btn_Thongke.Text = "Thống kê";
-            this.btn_Thongke.UseVisualStyleBackColor = true;
+            this.btn_DoanhThu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_DoanhThu.Location = new System.Drawing.Point(345, 460);
+            this.btn_DoanhThu.Name = "btn_DoanhThu";
+            this.btn_DoanhThu.Size = new System.Drawing.Size(184, 37);
+            this.btn_DoanhThu.TabIndex = 4;
+            this.btn_DoanhThu.Text = "Doanh Thu";
+            this.btn_DoanhThu.UseVisualStyleBackColor = true;
+            this.btn_DoanhThu.Click += new System.EventHandler(this.btn_DoanhThu_Click);
             // 
-            // dataGridView1
+            // dtg_ShowDT
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 336);
-            this.dataGridView1.TabIndex = 5;
+            this.dtg_ShowDT.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dtg_ShowDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_ShowDT.Location = new System.Drawing.Point(45, 86);
+            this.dtg_ShowDT.Name = "dtg_ShowDT";
+            this.dtg_ShowDT.RowHeadersWidth = 51;
+            this.dtg_ShowDT.RowTemplate.Height = 29;
+            this.dtg_ShowDT.Size = new System.Drawing.Size(756, 336);
+            this.dtg_ShowDT.TabIndex = 5;
             // 
             // btn_Thoat
             // 
             this.btn_Thoat.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Thoat.Location = new System.Drawing.Point(713, 462);
+            this.btn_Thoat.Location = new System.Drawing.Point(783, 515);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(121, 48);
             this.btn_Thoat.TabIndex = 7;
@@ -86,15 +87,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 522);
+            this.ClientSize = new System.Drawing.Size(916, 584);
             this.Controls.Add(this.btn_Thoat);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_Thongke);
+            this.Controls.Add(this.dtg_ShowDT);
+            this.Controls.Add(this.btn_DoanhThu);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "DoanhThu";
             this.Text = "DoanhThu";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowDT)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,8 +103,8 @@
         #endregion
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
-        private Button btn_Thongke;
-        private DataGridView dataGridView1;
+        private Button btn_DoanhThu;
+        private DataGridView dtg_ShowDT;
         private Button btn_Thoat;
     }
 }
