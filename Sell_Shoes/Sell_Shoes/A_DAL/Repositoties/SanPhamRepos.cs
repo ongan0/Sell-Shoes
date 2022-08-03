@@ -41,7 +41,7 @@ namespace Sell_Shoes.A_DAL.Repositoties
                 sanpham.Dongiaban = Dongiaban;
                 sanpham.Soluongcon = Soluongcon;
                 sanpham.Tenhang = Tenhang;
-                qLBG.SaveChanges(); return false;
+                qLBG.SaveChanges(); return true;
             }
             catch (Exception e)
             {

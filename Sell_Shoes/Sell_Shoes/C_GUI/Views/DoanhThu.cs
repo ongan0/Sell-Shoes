@@ -21,12 +21,9 @@ namespace Sell_Shoes.Views
         {
             InitializeComponent();
         }
-        
-
         private void btn_DoanhThu_Click(object sender, EventArgs e)
         {
             dtg_ShowDT.DataSource = DoanhThuSV.ShowAllDoanhThu();
         }
-      
     }
 }

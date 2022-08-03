@@ -89,7 +89,7 @@ namespace Sell_Shoes.Views
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value);
+            int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value.ToString());
             string ten = tbt_Ten.Text;
             decimal dongianhap = Convert.ToDecimal(tbt_DonGiaBan.Text);
             decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
