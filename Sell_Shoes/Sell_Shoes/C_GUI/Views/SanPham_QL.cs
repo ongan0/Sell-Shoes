@@ -25,22 +25,22 @@ namespace Sell_Shoes.Views
         }
         public void LoadDataToGridView(List<SanPham> sanPhams)
         {
-            //dtg_Show.DataSource = null;
+            dtg_Show.DataSource = null;
             dtg_Show.Rows.Clear();
+            
+            dtg_Show.ColumnCount = 6;
+            dtg_Show.Columns[0].Name = "ID";
+            dtg_Show.Columns[1].Name = "tên";
+            dtg_Show.Columns[2].Name = "đơn giá nhập";
+            dtg_Show.Columns[3].Name = "đơn giá bán";
+            dtg_Show.Columns[4].Name = "số lượng còn";
+            dtg_Show.Columns[5].Name = "tên hãng";
 
-            dtg_Show.ColumnCount = 5;
-           // dtg_Show.Columns[0].Name = "ID";
-            dtg_Show.Columns[0].Name = "tên";
-            dtg_Show.Columns[1].Name = "đơn giá nhập";
-            dtg_Show.Columns[2].Name = "đơn giá bán";
-            dtg_Show.Columns[3].Name = "số lượng còn";
-            dtg_Show.Columns[4].Name = "tên hãng";
-
-            //dtg_Show.Columns[0].Visible = false; 
+            dtg_Show.Columns[0].Visible = false; 
 
             foreach(var item in sanPhams)
             {
-                dtg_Show.Rows.Add( item.Ten, item.Dongianhap,item.Dongiaban, item.Soluongcon, item.Tenhang);
+                dtg_Show.Rows.Add( item.MaSanpham,item.Ten, item.Dongianhap,item.Dongiaban, item.Soluongcon, item.Tenhang);
             }
         }
         private void btn_ShowAll_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace Sell_Shoes.Views
             }
             else
             {
+                dtg_Show.DataSource = null;
                 dtg_Show.Rows.Clear();
                 count++;
             }
@@ -73,11 +74,11 @@ namespace Sell_Shoes.Views
         private void dtg_Show_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
-                tbt_Ten.Text = dtg_Show.CurrentRow.Cells[0].Value.ToString();
-                tbt_DonGiaNhap.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
-                tbt_DonGiaBan.Text = dtg_Show.CurrentRow.Cells[2].Value.ToString();
-                tbt_Soluong.Text = dtg_Show.CurrentRow.Cells[3].Value.ToString();
-                tbt_TenHang.Text = dtg_Show.CurrentRow.Cells[4].Value.ToString();
+                tbt_Ten.Text = dtg_Show.CurrentRow.Cells[1].Value.ToString();
+                tbt_DonGiaNhap.Text = dtg_Show.CurrentRow.Cells[2].Value.ToString();
+                tbt_DonGiaBan.Text = dtg_Show.CurrentRow.Cells[3].Value.ToString();
+                tbt_Soluong.Text = dtg_Show.CurrentRow.Cells[4].Value.ToString();
+                tbt_TenHang.Text = dtg_Show.CurrentRow.Cells[5].Value.ToString();
 
         }
 
