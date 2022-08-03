@@ -25,7 +25,7 @@ namespace Sell_Shoes.Views
         }
         public void LoadDataToGridView(List<SanPham> sanPhams)
         {
-            dtg_Show.DataSource = null;
+            //dtg_Show.DataSource = null;
             dtg_Show.Rows.Clear();
 
             dtg_Show.ColumnCount = 5;
