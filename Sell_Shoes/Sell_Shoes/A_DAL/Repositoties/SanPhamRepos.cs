@@ -41,7 +41,7 @@ namespace Sell_Shoes.A_DAL.Repositoties
                 sanpham.Dongiaban = Dongiaban;
                 sanpham.Soluongcon = Soluongcon;
                 sanpham.Tenhang = Tenhang;
-                qLBG.SaveChanges(); return false;
+                qLBG.SaveChanges(); return true;
             }
             catch (Exception e)
             {
@@ -50,21 +50,20 @@ namespace Sell_Shoes.A_DAL.Repositoties
         }
 
 
-
-        public bool DeleteSanPham(string ten) // xoa 1 xe dc lua chon
+        public bool DeleteSanPham(int masanpham) // xoa 1 xe dc lua chon
         {
             try
             {
-                var sanpham = qLBG.SanPhams.FirstOrDefault(p => p.Ten == ten);
-                qLBG.SanPhams.RemoveRange(sanpham);
+                var sanpham = qLBG.SanPhams.FirstOrDefault(p => p.MaSanpham == masanpham);
+                qLBG.SanPhams.Remove(sanpham);
                 qLBG.SaveChanges();
                 return true;
-
             }
             catch(Exception e)
             {
                 MessageBox.Show(e.Message); return false;
             }
+                
         }
         
     }

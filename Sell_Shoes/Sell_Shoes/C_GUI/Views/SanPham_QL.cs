@@ -27,12 +27,16 @@ namespace Sell_Shoes.Views
         {
             dtg_Show.DataSource = null;
             dtg_Show.Rows.Clear();
+
             dtg_Show.ColumnCount = 5;
+           // dtg_Show.Columns[0].Name = "ID";
             dtg_Show.Columns[0].Name = "tên";
             dtg_Show.Columns[1].Name = "đơn giá nhập";
             dtg_Show.Columns[2].Name = "đơn giá bán";
             dtg_Show.Columns[3].Name = "số lượng còn";
             dtg_Show.Columns[4].Name = "tên hãng";
+
+            //dtg_Show.Columns[0].Visible = false; 
 
             foreach(var item in sanPhams)
             {
@@ -53,27 +57,17 @@ namespace Sell_Shoes.Views
             }
         }
 
-      // xóa sự kiện click
-      // sửa phần thêm 
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            //int masanpham = Convert.ToInt32(tbt_Ma.Text);
-            //string ten = tbt_Ten.Text;
-            //decimal dongianhap = Convert.ToDecimal(tbt_Gia.Text);
-            //int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-            //string tenhang = tbt_Ten.Text;
            
                 string ten = tbt_Ten.Text;
-                decimal dongianhap = Convert.ToDecimal(tbt_DonGiaBan.Text);
+                decimal dongianhap = Convert.ToDecimal(tbt_DonGiaNhap.Text);
                 decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
                 int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-                string tenhang = tbt_DonGiaNhap.Text;
+                string tenhang = tbt_TenHang.Text;
                 MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap,dongiaban,  soluongcon, tenhang));
                 LoadDataToGridView(sanPhamSV.ShowAllSanPham());
-
-          
-          
         }
 
         private void dtg_Show_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -91,18 +85,18 @@ namespace Sell_Shoes.Views
         {
             int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value);
             string ten = tbt_Ten.Text;
-            decimal dongianhap = Convert.ToDecimal(tbt_DonGiaBan.Text);
+            decimal dongianhap = Convert.ToDecimal(tbt_DonGiaNhap.Text);
             decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
             int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-            string tenhang = tbt_DonGiaNhap.Text;
+            string tenhang = tbt_TenHang.Text;
             MessageBox.Show(sanPhamSV.Updatesanpham(masanpham,ten, dongianhap, dongiaban ,soluongcon, tenhang));
             LoadDataToGridView(sanPhamSV.ShowAllSanPham());
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            string ten = tbt_Ten.Text;
-            MessageBox.Show(sanPhamSV.DeleteSanPham(ten));
+            int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value);
+            MessageBox.Show(sanPhamSV.DeleteSanPham(masanpham));
             LoadDataToGridView(sanPhamSV.ShowAllSanPham());
         }
 

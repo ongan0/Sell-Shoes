@@ -37,10 +37,9 @@ namespace Sell_Shoes.B_BUS.Services
             return spRepos.EditSanPham(masanpham ,ten, dongianhap, dongiaban, soluongcon, tenhang)? "sửa thành công" : "sửa thất bại";
         }
         
-        public string DeleteSanPham(string ten )
+        public string DeleteSanPham(int masanpham )
         {
-            return spRepos.DeleteSanPham(ten) ? "xóa thành công" : "xóa thất bại";
-           
+            return spRepos.DeleteSanPham(masanpham) ? "xóa thành công" : "xóa thất bại";
         }
         
     }
