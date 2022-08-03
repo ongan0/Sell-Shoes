@@ -31,29 +31,32 @@ namespace Sell_Shoes.A_DAL.Repositoties
             }
         }
 
-        public bool EditSanPham(int MaSanpham, string Ten, decimal Dongianhap, int Soluongcon, string Tenhang)
+        public bool EditSanPham(int masanpham ,string Ten, decimal Dongianhap, decimal Dongiaban, int Soluongcon, string Tenhang)
         {
             try
             {
-                var sanpham = qLBG.SanPhams.FirstOrDefault(p => p.MaSanpham == MaSanpham);
+                var sanpham = qLBG.SanPhams.FirstOrDefault(p => p.MaSanpham == masanpham);
                 sanpham.Ten = Ten;
                 sanpham.Dongianhap = Dongianhap;
+                sanpham.Dongiaban = Dongiaban;
                 sanpham.Soluongcon = Soluongcon;
                 sanpham.Tenhang = Tenhang;
                 qLBG.SaveChanges(); return false;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message); return false;
             }
         }
 
-        public bool DeleteSanPham(int masanpham) // xoa 1 xe dc lua chon
+
+
+        public bool DeleteSanPham(string ten) // xoa 1 xe dc lua chon
         {
             try
             {
-                var sanpham = qLBG.SanPhams.FirstOrDefault(p => p.MaSanpham == masanpham);
-                qLBG.SanPhams.Remove(sanpham);
+                var sanpham = qLBG.SanPhams.FirstOrDefault(p => p.Ten == ten);
+                qLBG.SanPhams.RemoveRange(sanpham);
                 qLBG.SaveChanges();
                 return true;
 

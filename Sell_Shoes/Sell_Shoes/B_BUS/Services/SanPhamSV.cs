@@ -20,26 +20,27 @@ namespace Sell_Shoes.B_BUS.Services
         {
             return spRepos.GetAllSanPham();
         }
-      public string CreateNewSanPham(string Ten, decimal Dongianhap, int Soluongcon, string Tenhang)
+      public string CreateNewSanPham(string Ten, decimal Dongianhap, decimal Dongiaban , int Soluongcon, string Tenhang)
       {
             SanPham sp = new SanPham();
             sp.Ten = Ten;
             sp.Dongianhap = Dongianhap;
+            sp.Dongiaban = Dongiaban;
             sp.Soluongcon = Soluongcon;
             sp.Tenhang = Tenhang;
             
             return spRepos.AddSanPham(sp) ? "thêm thành công" : "thêm thất bại";
-        }
+      }
 
-        public string UpdateSanPham(int MaSanpham, string Ten, decimal Dongianhap, int Soluongcon, string Tenhang)
+        public string Updatesanpham(int masanpham,string ten, decimal dongianhap, decimal dongiaban, int soluongcon, string tenhang)
         {
-            return spRepos.EditSanPham(MaSanpham, Ten, Dongianhap , Soluongcon , Tenhang) ? "thêm thành công" : "thêm thất bại";
+            return spRepos.EditSanPham(masanpham ,ten, dongianhap, dongiaban, soluongcon, tenhang)? "sửa thành công" : "sửa thất bại";
         }
         
-        public string DeleteAGiay(int masanpham)
+        public string DeleteSanPham(string ten )
         {
-            return spRepos.DeleteSanPham(masanpham) ? "thêm thành công" : "thêm thất bại";
-
+            return spRepos.DeleteSanPham(ten) ? "xóa thành công" : "xóa thất bại";
+           
         }
         
     }
