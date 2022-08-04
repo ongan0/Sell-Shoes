@@ -46,17 +46,23 @@ namespace Sell_Shoes.Views
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     TongHopCN_QL tongHopCN_QL = new TongHopCN_QL();
+
                     tongHopCN_QL.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("Đăng nhập thành công");
+
                     TongHopCN_NV tongHopCN_NV = new TongHopCN_NV();
+                    
                     tongHopCN_NV.ShowDialog();
                 }
             }
         }
 
-        
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace Sell_Shoes.Views
         public SanPham_QL()
         {
             InitializeComponent();
+            LoadDataToGridView(sanPhamSV.ShowAllSanPham());
         }
         public void LoadDataToGridView(List<SanPham> sanPhams)
         {
@@ -69,7 +70,7 @@ namespace Sell_Shoes.Views
                 decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
                 int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
                 string tenhang = tbt_TenHang.Text;
-                if (isNumber(tenhang))
+                if (isNumber(tenhang) == false) 
                 {
                     MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap, dongiaban, soluongcon, tenhang));
                     LoadDataToGridView(sanPhamSV.ShowAllSanPham());
@@ -81,14 +82,14 @@ namespace Sell_Shoes.Views
             }
             catch (Exception )
             {
-                MessageBox.Show("thông tin bạn nhập bị lỗi");
+                MessageBox.Show("đơn giá không được nhập chữ");
             }
 
          }
         
         public bool isNumber(string pText)
         {
-            Regex regex = new Regex(@"^[\\D]{1,}$");
+            Regex regex = new Regex(@"^[a-zA-Z]$");
             return regex.IsMatch(pText);
         }
 
@@ -113,7 +114,7 @@ namespace Sell_Shoes.Views
                 decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
                 int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
                 string tenhang = tbt_TenHang.Text;
-                if (isNumber(tenhang))
+                if (isNumber(tenhang) == false)
                 {
                     MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap, dongiaban, soluongcon, tenhang));
                     LoadDataToGridView(sanPhamSV.ShowAllSanPham());
@@ -125,7 +126,7 @@ namespace Sell_Shoes.Views
             }
             catch (Exception)
             {
-                MessageBox.Show("thông tin bạn nhập bị lỗi");
+                MessageBox.Show("đơn giá không được nhập chữ");
             }
 
         }
@@ -140,6 +141,7 @@ namespace Sell_Shoes.Views
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             TongHopCN_QL tongHopCN_QL = new TongHopCN_QL();
+            Dispose(true);
             tongHopCN_QL.ShowDialog();
         }
     }
