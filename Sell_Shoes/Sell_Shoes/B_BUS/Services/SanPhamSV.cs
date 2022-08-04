@@ -14,7 +14,6 @@ namespace Sell_Shoes.B_BUS.Services
 
         public SanPhamSV()
         {
-
         }
         public List<SanPham> ShowAllSanPham()
         {

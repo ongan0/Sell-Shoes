@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sell_Shoes.A_DAL.Models;
@@ -61,14 +62,34 @@ namespace Sell_Shoes.Views
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
                 string ten = tbt_Ten.Text;
                 decimal dongianhap = Convert.ToDecimal(tbt_DonGiaNhap.Text);
                 decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
                 int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
                 string tenhang = tbt_TenHang.Text;
-                MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap,dongiaban,  soluongcon, tenhang));
-                LoadDataToGridView(sanPhamSV.ShowAllSanPham());
+                if (isNumber(tenhang))
+                {
+                    MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap, dongiaban, soluongcon, tenhang));
+                    LoadDataToGridView(sanPhamSV.ShowAllSanPham());
+                }
+                else
+                {
+                    MessageBox.Show("tên hãng không đc ghi số ");
+                }
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("thông tin bạn nhập bị lỗi");
+            }
+
+         }
+        
+        public bool isNumber(string pText)
+        {
+            Regex regex = new Regex(@"^[\\D]{1,}$");
+            return regex.IsMatch(pText);
         }
 
         private void dtg_Show_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -79,19 +100,34 @@ namespace Sell_Shoes.Views
                 tbt_DonGiaBan.Text = dtg_Show.CurrentRow.Cells[3].Value.ToString();
                 tbt_Soluong.Text = dtg_Show.CurrentRow.Cells[4].Value.ToString();
                 tbt_TenHang.Text = dtg_Show.CurrentRow.Cells[5].Value.ToString();
-
+            
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value.ToString());
-            string ten = tbt_Ten.Text;
-            decimal dongianhap = Convert.ToDecimal(tbt_DonGiaNhap.Text);
-            decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
-            int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-            string tenhang = tbt_TenHang.Text;
-            MessageBox.Show(sanPhamSV.Updatesanpham(masanpham,ten, dongianhap, dongiaban ,soluongcon, tenhang));
-            LoadDataToGridView(sanPhamSV.ShowAllSanPham());
+            try 
+            {
+                int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value.ToString());
+                string ten = tbt_Ten.Text;
+                decimal dongianhap = Convert.ToDecimal(tbt_DonGiaNhap.Text);
+                decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
+                int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
+                string tenhang = tbt_TenHang.Text;
+                if (isNumber(tenhang))
+                {
+                    MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap, dongiaban, soluongcon, tenhang));
+                    LoadDataToGridView(sanPhamSV.ShowAllSanPham());
+                }
+                else
+                {
+                    MessageBox.Show("tên hãng không đc ghi số ");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("thông tin bạn nhập bị lỗi");
+            }
+
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
