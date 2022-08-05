@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_ShowAll = new System.Windows.Forms.Button();
             this.dtg_Show = new System.Windows.Forms.DataGridView();
             this.btn_Them = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
@@ -46,17 +45,6 @@
             this.tbt_TenHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Show)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_ShowAll
-            // 
-            this.btn_ShowAll.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ShowAll.Location = new System.Drawing.Point(827, 604);
-            this.btn_ShowAll.Name = "btn_ShowAll";
-            this.btn_ShowAll.Size = new System.Drawing.Size(236, 44);
-            this.btn_ShowAll.TabIndex = 0;
-            this.btn_ShowAll.Text = "Danh sách";
-            this.btn_ShowAll.UseVisualStyleBackColor = true;
-            this.btn_ShowAll.Click += new System.EventHandler(this.btn_ShowAll_Click);
             // 
             // dtg_Show
             // 
@@ -166,9 +154,9 @@
             // btn_Thoat
             // 
             this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Thoat.Location = new System.Drawing.Point(1093, 669);
+            this.btn_Thoat.Location = new System.Drawing.Point(1111, 638);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(222, 46);
+            this.btn_Thoat.Size = new System.Drawing.Size(204, 48);
             this.btn_Thoat.TabIndex = 16;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -220,7 +208,6 @@
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.dtg_Show);
-            this.Controls.Add(this.btn_ShowAll);
             this.Name = "SanPham_QL";
             this.Text = "SanPham";
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Show)).EndInit();
@@ -230,8 +217,6 @@
         }
 
         #endregion
-
-        private Button btn_ShowAll;
         private DataGridView dtg_Show;
         private Button btn_Them;
         private Button btn_Sua;
