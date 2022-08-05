@@ -27,10 +27,9 @@ namespace Sell_Shoes.Views
         private Account? account;
         private void btt_Login_Click(object sender, EventArgs e)
         {
-       
-            // toi da sua code 
-//Tuấn đây
-        
+            Login login = new Login();
+
+
             if (tbt_TenDangNhap.Text.Trim() == String.Empty || tbt_MatKhau.Text.Trim() == "")
             {
                 MessageBox.Show("Bạn cần nhập đầy đủ tên đăng nhập và mật khẩu");
@@ -46,8 +45,9 @@ namespace Sell_Shoes.Views
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     TongHopCN_QL tongHopCN_QL = new TongHopCN_QL();
-
+                    
                     tongHopCN_QL.ShowDialog();
+                    
                 }
                 else
                 {
@@ -56,6 +56,7 @@ namespace Sell_Shoes.Views
                     TongHopCN_NV tongHopCN_NV = new TongHopCN_NV();
                     
                     tongHopCN_NV.ShowDialog();
+                    
                 }
             }
         }

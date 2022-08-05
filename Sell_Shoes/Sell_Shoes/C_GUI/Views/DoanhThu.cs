@@ -16,7 +16,6 @@ namespace Sell_Shoes.Views
     public partial class DoanhThu : Form
     {
         List<Sell_Shoes.A_DAL.Models.DoanhThu> doanhThus = new List<A_DAL.Models.DoanhThu>();
-        int count = 0;
         DoanhThuSV doanhThuSV = new DoanhThuSV();
         public DoanhThu()
         {
@@ -55,6 +54,11 @@ namespace Sell_Shoes.Views
             var stop = Convert.ToDateTime(dtp_DateStop.Value);
 
             LoadDTShow(doanhThuSV.SearchDT(start, stop));
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

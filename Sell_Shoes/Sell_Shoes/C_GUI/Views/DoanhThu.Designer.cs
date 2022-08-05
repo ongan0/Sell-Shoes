@@ -84,6 +84,7 @@
             this.btn_Thoat.TabIndex = 7;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // DoanhThu
             // 

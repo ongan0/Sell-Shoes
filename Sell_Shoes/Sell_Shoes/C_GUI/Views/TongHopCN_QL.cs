@@ -37,5 +37,19 @@ namespace Sell_Shoes.Views
             DoanhThu doanhThu = new DoanhThu();
             doanhThu.ShowDialog();
         }
+
+        
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
+
+        private void btn_Support_Click(object sender, EventArgs e)
+        {
+            Support support = new Support();
+            support.ShowDialog();
+        }
     }
 }

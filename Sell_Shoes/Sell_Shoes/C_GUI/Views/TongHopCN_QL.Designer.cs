@@ -34,7 +34,6 @@
             this.btn_Doanhthu = new System.Windows.Forms.Button();
             this.btn_Support = new System.Windows.Forms.Button();
             this.btn_Logout = new System.Windows.Forms.Button();
-            this.btn_Thoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -93,6 +92,7 @@
             this.btn_Support.TabIndex = 4;
             this.btn_Support.Text = "Support";
             this.btn_Support.UseVisualStyleBackColor = false;
+            this.btn_Support.Click += new System.EventHandler(this.btn_Support_Click);
             // 
             // btn_Logout
             // 
@@ -104,16 +104,7 @@
             this.btn_Logout.TabIndex = 5;
             this.btn_Logout.Text = "Logout";
             this.btn_Logout.UseVisualStyleBackColor = false;
-            // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Thoat.Location = new System.Drawing.Point(695, 384);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(105, 42);
-            this.btn_Thoat.TabIndex = 15;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // TongHopCN_QL
             // 
@@ -121,7 +112,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(822, 473);
-            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Logout);
             this.Controls.Add(this.btn_Support);
             this.Controls.Add(this.btn_Doanhthu);
@@ -143,6 +133,5 @@
         private Button btn_Doanhthu;
         private Button btn_Support;
         private Button btn_Logout;
-        private Button btn_Thoat;
     }
 }

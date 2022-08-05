@@ -17,7 +17,7 @@ namespace Sell_Shoes.Views
         List<HoaDon> hoaDons = new List<HoaDon>();
         HoaDonSv hdSV = new HoaDonSv();
         SanPham sanPham = new SanPham();
-        QLBG_HTContext htContext = new QLBG_HTContext();
+        QLBG_HTContext context = new QLBG_HTContext();
 
         public HoaDon_QL()
         {
@@ -51,9 +51,9 @@ namespace Sell_Shoes.Views
                 if (id == hoaDonCT.MaHoadon)
                 {
 
-                    var name = htContext.SanPhams.FirstOrDefault(p => p.MaSanpham == hoaDonCT.MaSanpham).Ten.ToString();
+                    string name = context.SanPhams.FirstOrDefault(p => p.MaSanpham == hoaDonCT.MaSanpham).Ten;
 
-                    dtg_ShowCT.Rows.Add(name, hoaDonCT.Soluongmua,hoaDonCT.Dongiaban, hoaDonCT.Tongtien);
+                    dtg_ShowCT.Rows.Add(name, hoaDonCT.Soluongmua, hoaDonCT.Tongtien);
                 }
             }
         }
@@ -69,6 +69,7 @@ namespace Sell_Shoes.Views
         }
         private void dtg_ShowHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             try
             {
                 tbt_Id.Text = dtg_ShowHD.CurrentRow.Cells[0].Value.ToString();
@@ -77,6 +78,7 @@ namespace Sell_Shoes.Views
             }
             catch (Exception)
             {
+                
                 tbt_Id.Text = "";
                 dtg_ShowCT.Rows.Clear();
             }
@@ -109,8 +111,7 @@ namespace Sell_Shoes.Views
 
         private void btt_out_Click(object sender, EventArgs e)
         {
-            TongHopCN_QL tongHopCN_QL = new TongHopCN_QL();
-            tongHopCN_QL.ShowDialog();
+            this.Close();
         }
     }
 }
