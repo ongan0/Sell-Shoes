@@ -21,6 +21,7 @@ namespace Sell_Shoes.Views
         private void btn_Hoadon_Click(object sender, EventArgs e)
         {
             HoaDon_QL hoaDon_QL = new HoaDon_QL();
+
             hoaDon_QL.ShowDialog();
         }
 
