@@ -106,6 +106,7 @@ namespace Sell_Shoes.Views
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
+            // lấy ra thứ tứ của hàng trong bảng là gì 
             try 
             {
                 int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value.ToString());
