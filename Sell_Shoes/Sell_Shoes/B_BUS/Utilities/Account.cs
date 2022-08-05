@@ -11,9 +11,6 @@ namespace Sell_Shoes.B_BUS.Utilities
         public string username { get; set; }
         public string password { get; set; }
 
-        //public Account()
-        //{
-        //}
 
         public Account(string username, string password)
         {

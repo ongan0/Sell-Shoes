@@ -24,7 +24,6 @@ namespace Sell_Shoes.Views
             new Account("staff","staff")
             
         };
-        private Account? account;
         private void btt_Login_Click(object sender, EventArgs e)
         {
        
