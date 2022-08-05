@@ -77,7 +77,7 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.Property(e => e.MaDoanhthu).HasColumnName("ma_doanhthu");
 
-                entity.Property(e => e.Doanhthu1)
+                entity.Property(e => e.Doanhthu)
                     .HasColumnType("money")
                     .HasColumnName("doanhthu");
 

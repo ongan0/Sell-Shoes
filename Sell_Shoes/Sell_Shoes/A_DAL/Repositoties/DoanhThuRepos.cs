@@ -15,6 +15,9 @@ namespace Sell_Shoes.A_DAL.Repositoties
         {
             return qLBG.DoanhThus.ToList();
         }
-
+        public List<DoanhThu> SearchDT(DateTime start, DateTime stop)
+        {
+            return qLBG.DoanhThus.Where(p => p.Ngayxuat >= start && p.Ngayxuat <= stop).ToList();
+        }
     }
 }

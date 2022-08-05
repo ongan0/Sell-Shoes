@@ -20,7 +20,11 @@ namespace Sell_Shoes.B_BUS.Services
         {
             return dtRepos.GetAllDoanhThu();
         }
-        
+        public List<DoanhThu> SearchDT(DateTime start, DateTime stop)
+        {
+            return dtRepos.SearchDT(start, stop);
+        }
+
     }
     
 }

@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DateStart = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DateStop = new System.Windows.Forms.DateTimePicker();
             this.btn_DoanhThu = new System.Windows.Forms.Button();
             this.dtg_ShowDT = new System.Windows.Forms.DataGridView();
             this.btn_Thoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowDT)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtp_DateStart
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(51, 53);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(222, 27);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtp_DateStart.Location = new System.Drawing.Point(51, 53);
+            this.dtp_DateStart.Name = "dtp_DateStart";
+            this.dtp_DateStart.Size = new System.Drawing.Size(222, 27);
+            this.dtp_DateStart.TabIndex = 2;
+            this.dtp_DateStart.ValueChanged += new System.EventHandler(this.dtp_DateStart_ValueChanged);
             // 
-            // dateTimePicker2
+            // dtp_DateStop
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(569, 53);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(222, 27);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtp_DateStop.Location = new System.Drawing.Point(569, 53);
+            this.dtp_DateStop.Name = "dtp_DateStop";
+            this.dtp_DateStop.Size = new System.Drawing.Size(222, 27);
+            this.dtp_DateStop.TabIndex = 3;
+            this.dtp_DateStop.ValueChanged += new System.EventHandler(this.dtp_DateStop_ValueChanged);
             // 
             // btn_DoanhThu
             // 
@@ -91,8 +93,8 @@
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.dtg_ShowDT);
             this.Controls.Add(this.btn_DoanhThu);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_DateStop);
+            this.Controls.Add(this.dtp_DateStart);
             this.Name = "DoanhThu";
             this.Text = "DoanhThu";
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowDT)).EndInit();
@@ -101,8 +103,8 @@
         }
 
         #endregion
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtp_DateStart;
+        private DateTimePicker dtp_DateStop;
         private Button btn_DoanhThu;
         private DataGridView dtg_ShowDT;
         private Button btn_Thoat;
