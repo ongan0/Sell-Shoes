@@ -125,9 +125,7 @@ namespace Sell_Shoes.Views
 
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
-            TongHopCN_QL tongHopCN_QL = new TongHopCN_QL();
-            Dispose(true);
-            tongHopCN_QL.ShowDialog();
+            this.Close();
         }
 
     }

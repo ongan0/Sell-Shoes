@@ -92,6 +92,7 @@
             this.btn_Support.TabIndex = 4;
             this.btn_Support.Text = "Support";
             this.btn_Support.UseVisualStyleBackColor = false;
+            this.btn_Support.Click += new System.EventHandler(this.btn_Support_Click);
             // 
             // btn_Logout
             // 

@@ -46,9 +46,7 @@ namespace Sell_Shoes.A_DAL.Models
                 entity.Property(e => e.MaCthoadon)
                     .ValueGeneratedOnAdd()
                     .HasColumnName("ma_cthoadon");
-                entity.Property(e => e.Dongiaban)
-                    .HasColumnType("money")
-                    .HasColumnName("dongiaban");
+                
 
                 entity.Property(e => e.Soluongmua).HasColumnName("soluongmua");
 
@@ -77,7 +75,7 @@ namespace Sell_Shoes.A_DAL.Models
 
                 entity.Property(e => e.MaDoanhthu).HasColumnName("ma_doanhthu");
 
-                entity.Property(e => e.Doanhthu1)
+                entity.Property(e => e.Doanhthu)
                     .HasColumnType("money")
                     .HasColumnName("doanhthu");
 
