@@ -33,12 +33,12 @@
             this.btn_Hienthi = new System.Windows.Forms.Button();
             this.dtp_DateStart = new System.Windows.Forms.DateTimePicker();
             this.dtg_ShowHD = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.btt_Delete = new System.Windows.Forms.Button();
-            this.tbt_Id = new System.Windows.Forms.TextBox();
             this.dtg_ShowCT = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btt_out = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbt_Id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowCT)).BeginInit();
             this.SuspendLayout();
@@ -95,16 +95,6 @@
             this.dtg_ShowHD.TabIndex = 11;
             this.dtg_ShowHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_ShowHD_CellClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(594, 397);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 23);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Mã";
-            // 
             // btt_Delete
             // 
             this.btt_Delete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -115,13 +105,6 @@
             this.btt_Delete.Text = "Xóa hóa đơn";
             this.btt_Delete.UseVisualStyleBackColor = true;
             this.btt_Delete.Click += new System.EventHandler(this.btt_Delete_Click);
-            // 
-            // tbt_Id
-            // 
-            this.tbt_Id.Location = new System.Drawing.Point(706, 393);
-            this.tbt_Id.Name = "tbt_Id";
-            this.tbt_Id.Size = new System.Drawing.Size(168, 27);
-            this.tbt_Id.TabIndex = 22;
             // 
             // dtg_ShowCT
             // 
@@ -151,6 +134,23 @@
             this.btt_out.Text = "Thoát";
             this.btt_out.UseVisualStyleBackColor = true;
             this.btt_out.Click += new System.EventHandler(this.btt_out_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(594, 397);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 23);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Mã";
+            // 
+            // tbt_Id
+            // 
+            this.tbt_Id.Location = new System.Drawing.Point(706, 393);
+            this.tbt_Id.Name = "tbt_Id";
+            this.tbt_Id.Size = new System.Drawing.Size(168, 27);
+            this.tbt_Id.TabIndex = 22;
             // 
             // HoaDon_QL
             // 
@@ -185,11 +185,11 @@
         private Button btn_Hienthi;
         private DateTimePicker dtp_DateStart;
         private DataGridView dtg_ShowHD;
-        private Label label1;
         private Button btt_Delete;
-        private TextBox tbt_Id;
         private DataGridView dtg_ShowCT;
         private Label label2;
         private Button btt_out;
+        private Label label1;
+        private TextBox tbt_Id;
     }
 }
