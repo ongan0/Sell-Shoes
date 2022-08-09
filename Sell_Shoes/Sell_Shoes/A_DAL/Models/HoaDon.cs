@@ -10,8 +10,10 @@ namespace Sell_Shoes.A_DAL.Models
             CthoaDons = new HashSet<CthoaDon>();
         }
 
+
+
         public int MaHoadon { get; set; }
-        public DateTime Ngaylap { get; set; }
+        public DateTime? Ngaylap { get; set; }
         public decimal? Thanhtien { get; set; }
 
         public virtual ICollection<CthoaDon> CthoaDons { get; set; }

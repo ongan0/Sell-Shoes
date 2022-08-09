@@ -11,6 +11,17 @@ namespace Sell_Shoes.A_DAL.Models
         public int? Soluongmua { get; set; }
         public decimal? Tongtien { get; set; }
 
+        public CthoaDon(int maSanpham, int maHoadon, int? soluongmua)
+        {
+            MaSanpham = maSanpham;
+            MaHoadon = maHoadon;
+            Soluongmua = soluongmua;
+        }
+
+        public CthoaDon()
+        {
+        }
+
         public virtual SanPham MaSanpham1 { get; set; } = null!;
         public virtual HoaDon MaSanphamNavigation { get; set; } = null!;
     }
