@@ -56,6 +56,7 @@
             this.btn_Order.TabIndex = 1;
             this.btn_Order.Text = "Order";
             this.btn_Order.UseVisualStyleBackColor = false;
+            this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
             // 
             // btn_Hoadon
             // 
@@ -67,6 +68,7 @@
             this.btn_Hoadon.TabIndex = 2;
             this.btn_Hoadon.Text = "Hóa đơn";
             this.btn_Hoadon.UseVisualStyleBackColor = false;
+            this.btn_Hoadon.Click += new System.EventHandler(this.btn_Hoadon_Click);
             // 
             // btn_Doanhthu
             // 
@@ -78,6 +80,7 @@
             this.btn_Doanhthu.TabIndex = 3;
             this.btn_Doanhthu.Text = "Doanh thu";
             this.btn_Doanhthu.UseVisualStyleBackColor = false;
+            this.btn_Doanhthu.Click += new System.EventHandler(this.btn_Doanhthu_Click);
             // 
             // btn_Support
             // 
@@ -89,6 +92,7 @@
             this.btn_Support.TabIndex = 5;
             this.btn_Support.Text = "Support";
             this.btn_Support.UseVisualStyleBackColor = false;
+            this.btn_Support.Click += new System.EventHandler(this.btn_Support_Click);
             // 
             // btn_Logout
             // 

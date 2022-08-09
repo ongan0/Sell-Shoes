@@ -19,8 +19,29 @@ namespace Sell_Shoes.Views
 
         private void btn_Logout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_Order_Click(object sender, EventArgs e)
+        {
+            Order_NV order_NV = new Order_NV();
+            order_NV.ShowDialog();
+        }
+
+        private void btn_Hoadon_Click(object sender, EventArgs e)
+        {
+            HoaDon_NV hoaDon = new HoaDon_NV();
+            hoaDon.ShowDialog();
+        }
+
+        private void btn_Doanhthu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_Support_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -127,6 +127,5 @@ namespace Sell_Shoes.Views
         {
             this.Close();
         }
-
     }
 }
