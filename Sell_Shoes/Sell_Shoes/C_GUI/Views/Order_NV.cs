@@ -96,25 +96,6 @@ namespace Sell_Shoes.Views
             }
         }
         string idgh;
-
-        private void tbt_SoLuong_TextChanged(object sender, EventArgs e)
-        {
-            int slCon=0;
-            for (int i = 0; i < dtg_Menu.Rows.Count - 1; i++)
-            {
-                if (dtg_GioHang.CurrentRow.Cells[0].Value.ToString() == dtg_Menu.Rows[i].Cells[0].Value.ToString())
-                {
-                    slCon=(int)dtg_Menu.Rows[i].Cells[4].Value;
-                    break;
-                }
-            }
-            bool sl = int.TryParse(tbt_SoLuong.Text,out int a);
-            if (sl && a<=slCon)
-            {
-                dtg_GioHang.CurrentRow.Cells[3].Value = tbt_SoLuong.Text;
-            }else if(a>slCon) MessageBox.Show("Không đủ số lượng");
-        }
-
         private void btt_XoaSP_Click(object sender, EventArgs e)
         {
             if (dtg_GioHang.CurrentRow == null || dtg_GioHang.CurrentRow.Index == (dtg_GioHang.Rows.Count - 1))
@@ -172,7 +153,7 @@ namespace Sell_Shoes.Views
             else
             {
                 idgh = dtg_GioHang.CurrentRow.Cells[0].Value.ToString();
-                tbt_SoLuong.Text = dtg_GioHang.CurrentRow.Cells[3].Value.ToString();
+                nud_SoLuong.Text = dtg_GioHang.CurrentRow.Cells[3].Value.ToString();
             }
         }
 
@@ -185,7 +166,7 @@ namespace Sell_Shoes.Views
                 decimal y = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[3].Value);
                 tien += (x * y);
             }
-            tbt_Tien.Text = tien.ToString();
+            tbt_Tien.Text = Convert.ToInt32(tien).ToString();
         }
 
         private void dtg_GioHang_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -197,7 +178,7 @@ namespace Sell_Shoes.Views
                 decimal y = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[3].Value);
                 tien += (x * y);
             }
-            tbt_Tien.Text = tien.ToString();
+            tbt_Tien.Text = Convert.ToInt32(tien).ToString();
         }
 
         private void dtg_GioHang_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
@@ -209,7 +190,25 @@ namespace Sell_Shoes.Views
                 decimal y = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[3].Value);
                 tien += (x * y);
             }
-            tbt_Tien.Text = tien.ToString();
+            tbt_Tien.Text = Convert.ToInt32(tien).ToString();
+        }
+
+        private void nud_SoLuong_ValueChanged(object sender, EventArgs e)
+        {
+            int slCon = 0;
+            for (int i = 0; i < dtg_Menu.Rows.Count - 1; i++)
+            {
+                if (dtg_GioHang.CurrentRow.Cells[0].Value.ToString() == dtg_Menu.Rows[i].Cells[0].Value.ToString())
+                {
+                    slCon = (int)dtg_Menu.Rows[i].Cells[4].Value;
+                    break;
+                }
+            }
+            if (nud_SoLuong.Value <= slCon)
+            {
+                dtg_GioHang.CurrentRow.Cells[3].Value = nud_SoLuong.Value;
+            }
+            else MessageBox.Show("Không đủ số lượng");
         }
     }
 }

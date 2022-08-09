@@ -34,14 +34,15 @@
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.dtg_Menu = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbt_SoLuong = new System.Windows.Forms.TextBox();
             this.btt_XoaSP = new System.Windows.Forms.Button();
             this.Menu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbt_Tien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.nud_SoLuong = new System.Windows.Forms.NumericUpDown();
+            this.tbt_Tien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_GioHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Thanhtoan
@@ -119,14 +120,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Số lượng";
             // 
-            // tbt_SoLuong
-            // 
-            this.tbt_SoLuong.Location = new System.Drawing.Point(757, 409);
-            this.tbt_SoLuong.Name = "tbt_SoLuong";
-            this.tbt_SoLuong.Size = new System.Drawing.Size(125, 27);
-            this.tbt_SoLuong.TabIndex = 9;
-            this.tbt_SoLuong.TextChanged += new System.EventHandler(this.tbt_SoLuong_TextChanged);
-            // 
             // btt_XoaSP
             // 
             this.btt_XoaSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -158,13 +151,6 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Giỏ hàng";
             // 
-            // tbt_Tien
-            // 
-            this.tbt_Tien.Location = new System.Drawing.Point(757, 464);
-            this.tbt_Tien.Name = "tbt_Tien";
-            this.tbt_Tien.Size = new System.Drawing.Size(125, 27);
-            this.tbt_Tien.TabIndex = 14;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -175,18 +161,33 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Tổng thanh toán";
             // 
+            // nud_SoLuong
+            // 
+            this.nud_SoLuong.Location = new System.Drawing.Point(757, 419);
+            this.nud_SoLuong.Name = "nud_SoLuong";
+            this.nud_SoLuong.Size = new System.Drawing.Size(125, 27);
+            this.nud_SoLuong.TabIndex = 15;
+            this.nud_SoLuong.ValueChanged += new System.EventHandler(this.nud_SoLuong_ValueChanged);
+            // 
+            // tbt_Tien
+            // 
+            this.tbt_Tien.Location = new System.Drawing.Point(757, 464);
+            this.tbt_Tien.Name = "tbt_Tien";
+            this.tbt_Tien.Size = new System.Drawing.Size(125, 27);
+            this.tbt_Tien.TabIndex = 14;
+            // 
             // Order_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1070, 579);
+            this.Controls.Add(this.nud_SoLuong);
             this.Controls.Add(this.tbt_Tien);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.btt_XoaSP);
-            this.Controls.Add(this.tbt_SoLuong);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtg_Menu);
             this.Controls.Add(this.btn_Thoat);
@@ -198,6 +199,7 @@
             this.Load += new System.EventHandler(this.Order_NV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_GioHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,11 +212,11 @@
         private Button btn_Thoat;
         private DataGridView dtg_Menu;
         private Label label1;
-        private TextBox tbt_SoLuong;
         private Button btt_XoaSP;
         private Label Menu;
         private Label label3;
-        private TextBox tbt_Tien;
         private Label label2;
+        private NumericUpDown nud_SoLuong;
+        private TextBox tbt_Tien;
     }
 }
