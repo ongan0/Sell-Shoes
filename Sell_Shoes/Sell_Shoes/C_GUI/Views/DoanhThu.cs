@@ -10,18 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Sell_Shoes.Views
 {
     public partial class DoanhThu : Form
     {
+        QLBG_HTContext context = new QLBG_HTContext();
         List<Sell_Shoes.A_DAL.Models.DoanhThu> doanhThus = new List<A_DAL.Models.DoanhThu>();
         DoanhThuSV doanhThuSV = new DoanhThuSV();
         public DoanhThu()
         {
             InitializeComponent();
         }
-        public void LoadDTShow(List<Sell_Shoes.A_DAL.Models.DoanhThu> doanhThus)
+        public void LoadDTShow(List<A_DAL.Models.DoanhThu> doanhThus)
         {
             dtg_ShowDT.Rows.Clear();
             dtg_ShowDT.DataSource = null;
@@ -29,15 +29,10 @@ namespace Sell_Shoes.Views
             dtg_ShowDT.Columns[0].Name = "mã doanh thu";
             dtg_ShowDT.Columns[1].Name = "ngày xuất";
             dtg_ShowDT.Columns[2].Name = "doanh thu ";
-
             foreach (var item in doanhThus)
             {
                 dtg_ShowDT.Rows.Add(item.MaDoanhthu, item.Ngayxuat, item.Doanhthu);
             }
-        }
-        private void btn_DoanhThu_Click(object sender, EventArgs e)
-        {
-            LoadDTShow(doanhThuSV.ShowAllDoanhThu());
         }
 
         private void dtp_DateStop_ValueChanged(object sender, EventArgs e)
@@ -59,6 +54,16 @@ namespace Sell_Shoes.Views
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DoanhThu_Load(object sender, EventArgs e)
+        {
+            List<Sell_Shoes.A_DAL.Models.DoanhThu> doanhthu = new List<A_DAL.Models.DoanhThu>();
+            A_DAL.Models.DoanhThu doanhThu = new A_DAL.Models.DoanhThu();
+            doanhThu.Doanhthu = (decimal)100;
+            doanhthu.Add(doanhThu);
+            context.SaveChanges();
+            LoadDTShow(doanhThuSV.ShowAllDoanhThu());
         }
     }
 }

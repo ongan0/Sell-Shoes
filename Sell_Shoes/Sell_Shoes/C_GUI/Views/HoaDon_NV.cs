@@ -83,15 +83,6 @@ namespace Sell_Shoes.Views
             LoadDTGShow(hdSV.SearchHD(start, stop));
         }
 
-       
-
-        private void btt_Delete_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(tbt_Id.Text);
-            MessageBox.Show(hdSV.DeleteHD(id));
-            LoadDTGShow(hdSV.ShowHoaDon());
-        }
-
         private void btt_out_Click(object sender, EventArgs e)
         {
             this.Close();

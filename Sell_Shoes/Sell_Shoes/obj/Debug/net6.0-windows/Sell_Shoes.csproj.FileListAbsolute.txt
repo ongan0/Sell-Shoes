@@ -207,7 +207,6 @@ D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.c
 D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.DoanhThu.resources
 D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.HoaDon_NV.resources
 D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.HoaDon_QL.resources
-D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.KiemKho_NV.resources
 D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.Login.resources
 D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.Order_NV.resources
 D:\MOB104\Sell-Shoes\Sell_Shoes\Sell_Shoes\obj\Debug\net6.0-windows\Sell_Shoes.Views.SanPham_QL.resources

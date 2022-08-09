@@ -89,6 +89,7 @@ namespace Sell_Shoes.Views
             int id = Convert.ToInt32(tbt_Id.Text);
             MessageBox.Show(hdSV.DeleteHD(id));
             LoadDTGShow(hdSV.ShowHoaDon());
+            dtg_ShowCT.Rows.Clear();
         }
 
         private void dtp_DateStop_ValueChanged(object sender, EventArgs e)

@@ -19,7 +19,7 @@ namespace Sell_Shoes.Views
     {
 
         SanPhamSV sanPhamSV = new SanPhamSV();
-
+        QLBG_HTContext context = new QLBG_HTContext();
         public SanPham_QL()
         {
             InitializeComponent();
@@ -48,34 +48,33 @@ namespace Sell_Shoes.Views
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            try
+            decimal dongianhap = 0;
+            decimal dongiaban = 0;
+            int soluongcon = 0;
+            string ten = tbt_Ten.Text;
+            string tenhang = tbt_TenHang.Text;
+            bool m = Decimal.TryParse(tbt_DonGiaNhap.Text, out decimal x);
+            bool n = Decimal.TryParse(tbt_DonGiaBan.Text, out decimal y);
+            bool p = int.TryParse(tbt_Soluong.Text, out int z);
+            if (ten == "" || tenhang == "")
+                MessageBox.Show("Bạn không được để trống thông tin");
+            else if (!m || !n || !p) MessageBox.Show("Số lượng và giá phải được nhập số");
+            else if (m & n & p)
             {
-                string ten = tbt_Ten.Text;
-                decimal dongianhap = Convert.ToDecimal(tbt_DonGiaNhap.Text);
-                decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
-                int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-                string tenhang = tbt_TenHang.Text;
-                if (isNumber(tenhang) == false)
-                {
-                    MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap, dongiaban, soluongcon, tenhang));
-                    LoadDataToGridView(sanPhamSV.ShowAllSanPham());
-                }
+                dongianhap = x;
+                dongiaban = y;
+                soluongcon = z;
+                if (dongiaban <= 0 || dongianhap <= 0 || soluongcon <= 0) MessageBox.Show("Số lượng và giá phải lớn hơn 0");
                 else
-                {
-                    MessageBox.Show("tên hãng không đc ghi số ");
-                }
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("đơn giá không được nhập chữ");
+                    MessageBox.Show(sanPhamSV.CreateNewSanPham(ten, dongianhap, dongiaban, soluongcon, tenhang));
             }
 
+            LoadDataToGridView(sanPhamSV.ShowAllSanPham());
         }
 
         public bool isNumber(string pText)
         {
-            Regex regex = new Regex(@"[\\D]{1,}");
+            Regex regex = new Regex(@"\d");
             return regex.IsMatch(pText);
         }
 
@@ -96,30 +95,38 @@ namespace Sell_Shoes.Views
             }
             else
             {
-
-
-                try
+                int id = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value);
+                decimal dongianhap = 0;
+                decimal dongiaban = 0;
+                int soluongcon = 0;
+                string ten = tbt_Ten.Text;
+                string tenhang = tbt_TenHang.Text;
+                bool m = Decimal.TryParse(tbt_DonGiaNhap.Text, out decimal x);
+                bool n = Decimal.TryParse(tbt_DonGiaBan.Text, out decimal y);
+                bool p = int.TryParse(tbt_Soluong.Text, out int z);
+                if (ten == "" || tenhang == "")
+                    MessageBox.Show("Bạn không được để trống thông tin");
+                else if (!m || !n || !p) MessageBox.Show("Số lượng và giá phải được nhập số");
+                else if (m & n & p)
                 {
-                    int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value.ToString());
-                    string ten = tbt_Ten.Text;
-                    decimal dongianhap = Convert.ToDecimal(tbt_DonGiaNhap.Text);
-                    decimal dongiaban = Convert.ToDecimal(tbt_DonGiaBan.Text);
-                    int soluongcon = Convert.ToInt32(tbt_Soluong.Text);
-                    string tenhang = tbt_TenHang.Text;
-                    MessageBox.Show(sanPhamSV.Updatesanpham(masanpham, ten, dongianhap, dongiaban, soluongcon, tenhang));
-                    LoadDataToGridView(sanPhamSV.ShowAllSanPham());
+                    dongianhap = x;
+                    dongiaban = y;
+                    soluongcon = z;
+                    if (dongiaban <= 0 || dongianhap <= 0 || soluongcon <= 0) MessageBox.Show("Số lượng và giá phải lớn hơn 0");
+                    else
+                        MessageBox.Show(sanPhamSV.Updatesanpham(id, ten, dongianhap, dongiaban, soluongcon, tenhang));
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("đơn giá không được nhập chữ");
-                }
+                LoadDataToGridView(sanPhamSV.ShowAllSanPham());
             }
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             int masanpham = Convert.ToInt32(dtg_Show.CurrentRow.Cells[0].Value);
-            MessageBox.Show(sanPhamSV.DeleteSanPham(masanpham));
+            var list = context.CthoaDons.FirstOrDefault(p => p.MaSanpham == masanpham);
+            if (list == null)
+                MessageBox.Show(sanPhamSV.DeleteSanPham(masanpham));
+            else MessageBox.Show("Sản phẩm này bạn không thể xóa. Hãy liên hệ ADMIN để được hỗ trợ");
             LoadDataToGridView(sanPhamSV.ShowAllSanPham());
         }
 

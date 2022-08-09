@@ -96,18 +96,6 @@ namespace Sell_Shoes.Views
             }
         }
         string idgh;
-        private void dtg_GioHang_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtg_GioHang.CurrentRow.Index == (dtg_GioHang.Rows.Count - 1))
-            {
-
-            }
-            else
-            {
-                idgh = dtg_GioHang.CurrentRow.Cells[0].Value.ToString();
-                tbt_SoLuong.Text = dtg_GioHang.CurrentRow.Cells[3].Value.ToString();
-            }
-        }
 
         private void tbt_SoLuong_TextChanged(object sender, EventArgs e)
         {
@@ -125,7 +113,6 @@ namespace Sell_Shoes.Views
             {
                 dtg_GioHang.CurrentRow.Cells[3].Value = tbt_SoLuong.Text;
             }else if(a>slCon) MessageBox.Show("Không đủ số lượng");
-           
         }
 
         private void btt_XoaSP_Click(object sender, EventArgs e)
@@ -174,6 +161,55 @@ namespace Sell_Shoes.Views
                 dtg_GioHang.Rows.Clear();
                 LoadMenu(spSV.ShowAllSanPham());
             }
+        }
+
+        private void dtg_GioHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtg_GioHang.CurrentRow.Index == (dtg_GioHang.Rows.Count - 1))
+            {
+
+            }
+            else
+            {
+                idgh = dtg_GioHang.CurrentRow.Cells[0].Value.ToString();
+                tbt_SoLuong.Text = dtg_GioHang.CurrentRow.Cells[3].Value.ToString();
+            }
+        }
+
+        private void dtg_GioHang_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            decimal tien = 0;
+            for (int i = 0; i < dtg_GioHang.Rows.Count - 1; i++)
+            {
+                decimal x = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[4].Value);
+                decimal y = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[3].Value);
+                tien += (x * y);
+            }
+            tbt_Tien.Text = tien.ToString();
+        }
+
+        private void dtg_GioHang_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            decimal tien = 0;
+            for (int i = 0; i < dtg_GioHang.Rows.Count - 1; i++)
+            {
+                decimal x = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[4].Value);
+                decimal y = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[3].Value);
+                tien += (x * y);
+            }
+            tbt_Tien.Text = tien.ToString();
+        }
+
+        private void dtg_GioHang_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            decimal tien = 0;
+            for (int i = 0; i < dtg_GioHang.Rows.Count - 1; i++)
+            {
+                decimal x = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[4].Value);
+                decimal y = Convert.ToDecimal(dtg_GioHang.Rows[i].Cells[3].Value);
+                tien += (x * y);
+            }
+            tbt_Tien.Text = tien.ToString();
         }
     }
 }

@@ -38,6 +38,8 @@
             this.btt_XoaSP = new System.Windows.Forms.Button();
             this.Menu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.tbt_Tien = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_GioHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Menu)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +80,9 @@
             this.dtg_GioHang.Size = new System.Drawing.Size(488, 344);
             this.dtg_GioHang.TabIndex = 5;
             this.dtg_GioHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_GioHang_CellClick);
+            this.dtg_GioHang.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_GioHang_CellValueChanged);
+            this.dtg_GioHang.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dtg_GioHang_RowsAdded);
+            this.dtg_GioHang.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dtg_GioHang_RowsRemoved);
             // 
             // btn_Thoat
             // 
@@ -108,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(603, 432);
+            this.label1.Location = new System.Drawing.Point(582, 421);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 8;
@@ -116,7 +121,7 @@
             // 
             // tbt_SoLuong
             // 
-            this.tbt_SoLuong.Location = new System.Drawing.Point(757, 430);
+            this.tbt_SoLuong.Location = new System.Drawing.Point(757, 409);
             this.tbt_SoLuong.Name = "tbt_SoLuong";
             this.tbt_SoLuong.Size = new System.Drawing.Size(125, 27);
             this.tbt_SoLuong.TabIndex = 9;
@@ -125,9 +130,9 @@
             // btt_XoaSP
             // 
             this.btt_XoaSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btt_XoaSP.Location = new System.Drawing.Point(937, 421);
+            this.btt_XoaSP.Location = new System.Drawing.Point(917, 421);
             this.btt_XoaSP.Name = "btt_XoaSP";
-            this.btt_XoaSP.Size = new System.Drawing.Size(121, 58);
+            this.btt_XoaSP.Size = new System.Drawing.Size(141, 58);
             this.btt_XoaSP.TabIndex = 10;
             this.btt_XoaSP.Text = "Xóa sản phẩm";
             this.btt_XoaSP.UseVisualStyleBackColor = true;
@@ -153,12 +158,31 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Giỏ hàng";
             // 
+            // tbt_Tien
+            // 
+            this.tbt_Tien.Location = new System.Drawing.Point(757, 464);
+            this.tbt_Tien.Name = "tbt_Tien";
+            this.tbt_Tien.Size = new System.Drawing.Size(125, 27);
+            this.tbt_Tien.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(582, 464);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 25);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Tổng thanh toán";
+            // 
             // Order_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1070, 579);
+            this.Controls.Add(this.tbt_Tien);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.btt_XoaSP);
@@ -190,5 +214,7 @@
         private Button btt_XoaSP;
         private Label Menu;
         private Label label3;
+        private TextBox tbt_Tien;
+        private Label label2;
     }
 }

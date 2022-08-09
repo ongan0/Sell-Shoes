@@ -30,7 +30,6 @@
         {
             this.dtp_DateStart = new System.Windows.Forms.DateTimePicker();
             this.dtp_DateStop = new System.Windows.Forms.DateTimePicker();
-            this.btn_DoanhThu = new System.Windows.Forms.Button();
             this.dtg_ShowDT = new System.Windows.Forms.DataGridView();
             this.btn_Thoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowDT)).BeginInit();
@@ -52,19 +51,9 @@
             this.dtp_DateStop.TabIndex = 3;
             this.dtp_DateStop.ValueChanged += new System.EventHandler(this.dtp_DateStop_ValueChanged);
             // 
-            // btn_DoanhThu
-            // 
-            this.btn_DoanhThu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DoanhThu.Location = new System.Drawing.Point(345, 460);
-            this.btn_DoanhThu.Name = "btn_DoanhThu";
-            this.btn_DoanhThu.Size = new System.Drawing.Size(184, 37);
-            this.btn_DoanhThu.TabIndex = 4;
-            this.btn_DoanhThu.Text = "Doanh Thu";
-            this.btn_DoanhThu.UseVisualStyleBackColor = true;
-            this.btn_DoanhThu.Click += new System.EventHandler(this.btn_DoanhThu_Click);
-            // 
             // dtg_ShowDT
             // 
+            this.dtg_ShowDT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_ShowDT.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dtg_ShowDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_ShowDT.Location = new System.Drawing.Point(45, 86);
@@ -93,11 +82,11 @@
             this.ClientSize = new System.Drawing.Size(916, 584);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.dtg_ShowDT);
-            this.Controls.Add(this.btn_DoanhThu);
             this.Controls.Add(this.dtp_DateStop);
             this.Controls.Add(this.dtp_DateStart);
             this.Name = "DoanhThu";
             this.Text = "DoanhThu";
+            this.Load += new System.EventHandler(this.DoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowDT)).EndInit();
             this.ResumeLayout(false);
 
@@ -106,7 +95,6 @@
         #endregion
         private DateTimePicker dtp_DateStart;
         private DateTimePicker dtp_DateStop;
-        private Button btn_DoanhThu;
         private DataGridView dtg_ShowDT;
         private Button btn_Thoat;
     }

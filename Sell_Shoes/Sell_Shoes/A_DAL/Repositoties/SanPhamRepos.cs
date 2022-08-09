@@ -50,7 +50,7 @@ namespace Sell_Shoes.A_DAL.Repositoties
         }
 
 
-        public bool DeleteSanPham(int masanpham) // xoa 1 xe dc lua chon
+        public bool DeleteSanPham(int masanpham) 
         {
             try
             {

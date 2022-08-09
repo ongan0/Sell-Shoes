@@ -33,12 +33,12 @@
             this.btn_Hienthi = new System.Windows.Forms.Button();
             this.dtp_DateStart = new System.Windows.Forms.DateTimePicker();
             this.dtg_ShowHD = new System.Windows.Forms.DataGridView();
-            this.btt_Delete = new System.Windows.Forms.Button();
             this.dtg_ShowCT = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btt_out = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbt_Id = new System.Windows.Forms.TextBox();
+            this.btt_Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ShowCT)).BeginInit();
             this.SuspendLayout();
@@ -95,21 +95,10 @@
             this.dtg_ShowHD.TabIndex = 11;
             this.dtg_ShowHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_ShowHD_CellClick);
             // 
-            // btt_Delete
-            // 
-            this.btt_Delete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btt_Delete.Location = new System.Drawing.Point(990, 373);
-            this.btt_Delete.Name = "btt_Delete";
-            this.btt_Delete.Size = new System.Drawing.Size(158, 47);
-            this.btt_Delete.TabIndex = 21;
-            this.btt_Delete.Text = "Xóa hóa đơn";
-            this.btt_Delete.UseVisualStyleBackColor = true;
-            this.btt_Delete.Click += new System.EventHandler(this.btt_Delete_Click);
-            // 
             // dtg_ShowCT
             // 
             this.dtg_ShowCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_ShowCT.Location = new System.Drawing.Point(594, 93);
+            this.dtg_ShowCT.Location = new System.Drawing.Point(509, 93);
             this.dtg_ShowCT.Name = "dtg_ShowCT";
             this.dtg_ShowCT.RowHeadersWidth = 51;
             this.dtg_ShowCT.RowTemplate.Height = 29;
@@ -127,7 +116,7 @@
             // 
             // btt_out
             // 
-            this.btt_out.Location = new System.Drawing.Point(1054, 453);
+            this.btt_out.Location = new System.Drawing.Point(969, 470);
             this.btt_out.Name = "btt_out";
             this.btt_out.Size = new System.Drawing.Size(94, 29);
             this.btt_out.TabIndex = 27;
@@ -152,12 +141,23 @@
             this.tbt_Id.Size = new System.Drawing.Size(168, 27);
             this.tbt_Id.TabIndex = 22;
             // 
+            // btt_Delete
+            // 
+            this.btt_Delete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btt_Delete.Location = new System.Drawing.Point(905, 373);
+            this.btt_Delete.Name = "btt_Delete";
+            this.btt_Delete.Size = new System.Drawing.Size(158, 47);
+            this.btt_Delete.TabIndex = 21;
+            this.btt_Delete.Text = "Xóa hóa đơn";
+            this.btt_Delete.UseVisualStyleBackColor = true;
+            this.btt_Delete.Click += new System.EventHandler(this.btt_Delete_Click);
+            // 
             // HoaDon_QL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1188, 525);
+            this.ClientSize = new System.Drawing.Size(1074, 524);
             this.Controls.Add(this.btt_out);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtg_ShowCT);
@@ -185,11 +185,11 @@
         private Button btn_Hienthi;
         private DateTimePicker dtp_DateStart;
         private DataGridView dtg_ShowHD;
-        private Button btt_Delete;
         private DataGridView dtg_ShowCT;
         private Label label2;
         private Button btt_out;
         private Label label1;
         private TextBox tbt_Id;
+        private Button btt_Delete;
     }
 }

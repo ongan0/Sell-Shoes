@@ -33,29 +33,6 @@ namespace Sell_Shoes.Views
             HoaDon_NV hoaDon = new HoaDon_NV();
             hoaDon.ShowDialog();
         }
-
-        private void btn_Doanhthu_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_Support_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Order_Click(object sender, EventArgs e)
-        {
-            Order_NV order = new Order_NV();
-            order.ShowDialog();
-        }
-
-        private void btn_Hoadon_Click(object sender, EventArgs e)
-        {
-            HoaDon_NV hoaDon = new HoaDon_NV();
-            hoaDon.ShowDialog();
-        }
-
         private void btn_Doanhthu_Click(object sender, EventArgs e)
         {
             DoanhThu doanhThu = new DoanhThu();
