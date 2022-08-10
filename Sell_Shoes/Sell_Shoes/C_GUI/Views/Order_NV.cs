@@ -17,7 +17,7 @@ namespace Sell_Shoes.Views
 
         SanPhamSV spSV = new SanPhamSV();
         HoaDonSv hdSV = new HoaDonSv();
-        QLBG_HTContext context = new QLBG_HTContext();
+        
         public Order_NV()
         {
             InitializeComponent();
@@ -112,10 +112,10 @@ namespace Sell_Shoes.Views
 
         private void btn_Thanhtoan_Click(object sender, EventArgs e)
         {
+            QLBG_HTContext context = new QLBG_HTContext();
             if (dtg_GioHang.Rows.Count > 1)
             {
                 HoaDon hoaDon = new HoaDon();
-                
                 decimal tien = 0;
                 for(int i = 0; i < dtg_GioHang.Rows.Count - 1; i++)
                 {
@@ -140,7 +140,8 @@ namespace Sell_Shoes.Views
                     context.SaveChanges();
                 }
                 dtg_GioHang.Rows.Clear();
-                LoadMenu(spSV.ShowAllSanPham());
+                LoadMenu(context.SanPhams.ToList());
+                //LoadMenu(spSV.ShowAllSanPham());
             }
         }
 

@@ -14,7 +14,7 @@ namespace Sell_Shoes.Views
 {
     public partial class HoaDon_QL : Form
     {
-        List<HoaDon> hoaDons = new List<HoaDon>();
+        //List<HoaDon> hoaDons = new List<HoaDon>();
         HoaDonSv hdSV = new HoaDonSv();
         SanPham sanPham = new SanPham();
         QLBG_HTContext context = new QLBG_HTContext();
