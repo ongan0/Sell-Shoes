@@ -37,17 +37,17 @@
             // 
             // dtp_DateStart
             // 
-            this.dtp_DateStart.Location = new System.Drawing.Point(51, 53);
+            this.dtp_DateStart.Location = new System.Drawing.Point(188, 67);
             this.dtp_DateStart.Name = "dtp_DateStart";
-            this.dtp_DateStart.Size = new System.Drawing.Size(222, 27);
+            this.dtp_DateStart.Size = new System.Drawing.Size(261, 27);
             this.dtp_DateStart.TabIndex = 2;
             this.dtp_DateStart.ValueChanged += new System.EventHandler(this.dtp_DateStart_ValueChanged);
             // 
             // dtp_DateStop
             // 
-            this.dtp_DateStop.Location = new System.Drawing.Point(569, 53);
+            this.dtp_DateStop.Location = new System.Drawing.Point(472, 67);
             this.dtp_DateStop.Name = "dtp_DateStop";
-            this.dtp_DateStop.Size = new System.Drawing.Size(222, 27);
+            this.dtp_DateStop.Size = new System.Drawing.Size(264, 27);
             this.dtp_DateStop.TabIndex = 3;
             this.dtp_DateStop.ValueChanged += new System.EventHandler(this.dtp_DateStop_ValueChanged);
             // 
@@ -56,11 +56,12 @@
             this.dtg_ShowDT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_ShowDT.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dtg_ShowDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_ShowDT.Location = new System.Drawing.Point(45, 86);
+            this.dtg_ShowDT.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dtg_ShowDT.Location = new System.Drawing.Point(188, 134);
             this.dtg_ShowDT.Name = "dtg_ShowDT";
             this.dtg_ShowDT.RowHeadersWidth = 51;
             this.dtg_ShowDT.RowTemplate.Height = 29;
-            this.dtg_ShowDT.Size = new System.Drawing.Size(756, 336);
+            this.dtg_ShowDT.Size = new System.Drawing.Size(548, 336);
             this.dtg_ShowDT.TabIndex = 5;
             // 
             // btn_Thoat

@@ -87,6 +87,7 @@
             this.dtg_ShowHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_ShowHD.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dtg_ShowHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_ShowHD.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtg_ShowHD.Location = new System.Drawing.Point(12, 93);
             this.dtg_ShowHD.Name = "dtg_ShowHD";
             this.dtg_ShowHD.RowHeadersWidth = 51;
@@ -97,7 +98,9 @@
             // 
             // dtg_ShowCT
             // 
+            this.dtg_ShowCT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_ShowCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_ShowCT.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dtg_ShowCT.Location = new System.Drawing.Point(509, 93);
             this.dtg_ShowCT.Name = "dtg_ShowCT";
             this.dtg_ShowCT.RowHeadersWidth = 51;

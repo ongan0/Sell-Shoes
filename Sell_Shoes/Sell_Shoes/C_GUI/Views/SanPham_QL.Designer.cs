@@ -48,21 +48,22 @@
             // 
             // dtg_Show
             // 
+            this.dtg_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_Show.Location = new System.Drawing.Point(577, 34);
+            this.dtg_Show.Location = new System.Drawing.Point(463, 31);
             this.dtg_Show.Name = "dtg_Show";
             this.dtg_Show.RowHeadersWidth = 51;
             this.dtg_Show.RowTemplate.Height = 29;
-            this.dtg_Show.Size = new System.Drawing.Size(716, 515);
+            this.dtg_Show.Size = new System.Drawing.Size(716, 474);
             this.dtg_Show.TabIndex = 1;
             this.dtg_Show.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Show_CellClick);
             // 
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Them.Location = new System.Drawing.Point(18, 518);
+            this.btn_Them.Location = new System.Drawing.Point(29, 457);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(101, 31);
+            this.btn_Them.Size = new System.Drawing.Size(153, 48);
             this.btn_Them.TabIndex = 2;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
@@ -71,9 +72,9 @@
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Sua.Location = new System.Drawing.Point(218, 518);
+            this.btn_Sua.Location = new System.Drawing.Point(273, 457);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(111, 31);
+            this.btn_Sua.Size = new System.Drawing.Size(157, 48);
             this.btn_Sua.TabIndex = 3;
             this.btn_Sua.Text = "Sửa ";
             this.btn_Sua.UseVisualStyleBackColor = true;
@@ -82,9 +83,9 @@
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Xoa.Location = new System.Drawing.Point(412, 518);
+            this.btn_Xoa.Location = new System.Drawing.Point(130, 534);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(109, 31);
+            this.btn_Xoa.Size = new System.Drawing.Size(186, 48);
             this.btn_Xoa.TabIndex = 4;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
@@ -122,23 +123,23 @@
             // 
             // tbt_Ten
             // 
-            this.tbt_Ten.Location = new System.Drawing.Point(218, 79);
+            this.tbt_Ten.Location = new System.Drawing.Point(191, 81);
             this.tbt_Ten.Name = "tbt_Ten";
-            this.tbt_Ten.Size = new System.Drawing.Size(288, 27);
+            this.tbt_Ten.Size = new System.Drawing.Size(239, 27);
             this.tbt_Ten.TabIndex = 8;
             // 
             // tbt_DonGiaBan
             // 
-            this.tbt_DonGiaBan.Location = new System.Drawing.Point(218, 224);
+            this.tbt_DonGiaBan.Location = new System.Drawing.Point(191, 226);
             this.tbt_DonGiaBan.Name = "tbt_DonGiaBan";
-            this.tbt_DonGiaBan.Size = new System.Drawing.Size(288, 27);
+            this.tbt_DonGiaBan.Size = new System.Drawing.Size(239, 27);
             this.tbt_DonGiaBan.TabIndex = 10;
             // 
             // tbt_Soluong
             // 
-            this.tbt_Soluong.Location = new System.Drawing.Point(218, 306);
+            this.tbt_Soluong.Location = new System.Drawing.Point(191, 308);
             this.tbt_Soluong.Name = "tbt_Soluong";
-            this.tbt_Soluong.Size = new System.Drawing.Size(288, 27);
+            this.tbt_Soluong.Size = new System.Drawing.Size(239, 27);
             this.tbt_Soluong.TabIndex = 11;
             // 
             // label4
@@ -154,7 +155,7 @@
             // btn_Thoat
             // 
             this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Thoat.Location = new System.Drawing.Point(1111, 638);
+            this.btn_Thoat.Location = new System.Drawing.Point(937, 535);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(204, 48);
             this.btn_Thoat.TabIndex = 16;
@@ -164,9 +165,9 @@
             // 
             // tbt_DonGiaNhap
             // 
-            this.tbt_DonGiaNhap.Location = new System.Drawing.Point(218, 153);
+            this.tbt_DonGiaNhap.Location = new System.Drawing.Point(191, 155);
             this.tbt_DonGiaNhap.Name = "tbt_DonGiaNhap";
-            this.tbt_DonGiaNhap.Size = new System.Drawing.Size(288, 27);
+            this.tbt_DonGiaNhap.Size = new System.Drawing.Size(239, 27);
             this.tbt_DonGiaNhap.TabIndex = 9;
             // 
             // label5
@@ -182,9 +183,9 @@
             // 
             // tbt_TenHang
             // 
-            this.tbt_TenHang.Location = new System.Drawing.Point(218, 388);
+            this.tbt_TenHang.Location = new System.Drawing.Point(191, 390);
             this.tbt_TenHang.Name = "tbt_TenHang";
-            this.tbt_TenHang.Size = new System.Drawing.Size(288, 27);
+            this.tbt_TenHang.Size = new System.Drawing.Size(239, 27);
             this.tbt_TenHang.TabIndex = 18;
             // 
             // SanPham_QL
@@ -192,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
-            this.ClientSize = new System.Drawing.Size(1327, 727);
+            this.ClientSize = new System.Drawing.Size(1201, 587);
             this.Controls.Add(this.tbt_TenHang);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_Thoat);
