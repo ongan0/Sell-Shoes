@@ -173,6 +173,7 @@
             // 
             this.tbt_Tien.Location = new System.Drawing.Point(757, 464);
             this.tbt_Tien.Name = "tbt_Tien";
+            this.tbt_Tien.ReadOnly = true;
             this.tbt_Tien.Size = new System.Drawing.Size(125, 27);
             this.tbt_Tien.TabIndex = 14;
             // 
