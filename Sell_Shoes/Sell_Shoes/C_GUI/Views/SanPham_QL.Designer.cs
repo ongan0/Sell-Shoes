@@ -109,7 +109,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 23);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Đơn Gía Nhập";
+            this.label2.Text = "Đơn Giá Nhập";
             // 
             // label3
             // 
@@ -119,7 +119,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 23);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Đơn Gía Bán";
+            this.label3.Text = "Đơn Giá Bán";
             // 
             // tbt_Ten
             // 

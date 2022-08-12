@@ -37,7 +37,24 @@ namespace Sell_Shoes.A_DAL.Repositoties
         }
         public List<HoaDon> SearchHD(DateTime start, DateTime stop)
         {
-            return qLBG.HoaDons.Where(p => p.Ngaylap >= start && p.Ngaylap <= stop).ToList();
+            var date1= new DateTime(stop.Year, stop.Month, stop.Day);
+            try
+            {
+                date1 = new DateTime(stop.Year, stop.Month, stop.Day+1);
+            }
+            catch (Exception)
+            {
+                try
+                {
+                    date1 = new DateTime(stop.Year, stop.Month + 1, 1);
+                }
+                catch (Exception)
+                {
+
+                    date1 = new DateTime(stop.Year+1,1, 1);
+                }
+            }
+            return qLBG.HoaDons.Where(p => p.Ngaylap >= start && p.Ngaylap <= date1).ToList();
         }
     }
 }
